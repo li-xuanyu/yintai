@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <!-- Link Swiper's CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+
+    <!-- Demo styles -->
+    <style>
+        *{margin:0px;padding: 0;}
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .swiper-container{
+            height: 100%;
+            /* background-color: gray; */
+        }
+
+        .swiper-slide{
+            position: relative;
+        }
+
+        .slide1_img1{
+            position: absolute;
+            width: 60%;
+            top: 1%;
+            left: 50%;
+            margin-left: -30%;
+        }
+
+        .slide1_img2{
+            position: absolute;
+            width: 60%;
+            top: 50%;
+            left: 50%;
+            margin-left: -30%;
+        }
+
+        .swiper-slide img{
+            width: 100%;
+        }
+
+
+        .slide2_img1{
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            margin-left: -40%;
+            top: 2%;
+        }
+
+        .slide2_img2{
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            margin-left: -40%;
+            top: 40%;
+        }
+
+        .slide2_img3{
+            width: 70%;
+            position: absolute;
+            left: 50%;
+            margin-left: -35%;
+            top: 30%;
+        }
+
+        .slide2_img4{
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            margin-left: -40%;
+            top: 40%;
+        }
+
+        .icon{
+            position: fixed;
+            left:50%;
+            bottom:10px;
+            margin-left: -25px;
+            height: 28px;
+            width: 50px;
+            background-image: url("img/icon_up.png");
+            z-index:10;
+            animation:kerwinanimation 1s infinite;
+        }
+        
+        @keyframes kerwinanimation {
+            from{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            to{
+                transform: translateY(-100px);
+                opacity: 0.3;
+            }
+        }
+
+        #cover{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left:0px;
+            top:0px;
+            z-index:20;
+            color:white;
+            background: black;
+        }
+        @media  screen and (orientation:landscape ) {
+            /* //显示100% 100% 高 一张图片 */
+
+            #cover{
+                display:block;
+            }
+        }
+        @media  screen and (orientation:portrait ) {
+
+            /* //隐藏100% 100% 高 一张图片 */
+
+            #cover{
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <!-- //swiper-wrapper 就包裹所有轮播的页面 -->
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background:rgb(8, 56, 70)">
+            <div class="slide1_img1">
+            <img class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s" src="img/1-1.png">
+        </div>
+
+            <div class="slide1_img2">
+                <img class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0s" src="img/1-2.png">
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:rgb(146, 97, 191)">
+            <div class="slide2_img1">
+                <img class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s" src="img/2-1.png">
+            </div>
+            <div class="slide2_img2">
+                <img class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0s" src="img/2-2.png">
+            </div>
+            <div class="slide2_img3">
+                <img class="ani" swiper-animate-effect="tada" swiper-animate-duration="1.5s" swiper-animate-delay="0s" src="img/2-3.png">
+            </div>
+            <div class="slide2_img4">
+                <img class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s" src="img/2-4.png">
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:rgb(243, 83, 60)">
+
+        </div>
+        <div class="swiper-slide" style="background:rgb(255, 191, 80)">
+
+        </div>
+        <div class="swiper-slide" style="background:#14c145">
+
+        </div>
+    </div>
+
+</div>
+
+<div class="icon">
+
+</div>
+
+<div id="cover">横屏体验更好666</div>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container',{
+        direction:"vertical",
+        loop:true, //一定要注意 ，如果加上loop:true 后， 就不要使用nth-child选择器了。
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+
+    });
+
+
+
+    /*
+
+     1. swiper层级 z-index=1
+     2. 如果使用loop:true 之后，不要使用css3选择器 nth-child(1) ,最后一个复制一份变成第一个
+
+     3. 在手机横屏的处理，提示用户在手机竖直方向体验更高。  响应式设计处理（建议）。
+     js判读横屏也可以。
+
+     */
+
+    // window.onresize=function(){
+    //     console.log(document.documentElement.clientWidth);
+    //     console.log(document.documentElement.clientHeight);
+    // }
+
+//    @media  screen and (orientation:landscape ) {
+//        /* //显示100% 100% 高 一张图片 */
+//
+//    #cover{
+//            display:block;
+//        }
+//    }
+//    @media  screen and (orientation:portrait ) {
+//
+//        /* //隐藏100% 100% 高 一张图片 */
+//
+//    #cover{
+//            display:none;
+//        }
+//    }
+</script>
+</body>
+</html>

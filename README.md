@@ -1,2 +1,0 @@
-# yintai
-ec
