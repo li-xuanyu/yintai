@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 *{
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
+=======
+a{
+	text-decoration:none;
+>>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 }
 body,html{
 	width:100%;
 	height:100%;
+<<<<<<< HEAD
 	outline:none;
 a {
     text-decoration: none;
 }
 ul,li{
 	list-style:none;
+=======
+    outline: none;
+>>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 }
 .l{
 	float:left;
@@ -19,10 +28,18 @@ ul,li{
 .r{
 	float:right;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 #category{
 
 	
@@ -115,4 +132,8 @@ $base:30px; //html fontsize 就设置成这个值
     		}
 	}
 }
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
