@@ -16,7 +16,7 @@ class Hear extends React.Component{
 			<div className="xiala r" onClick={()=>{
 				this.props.event()
 			}}>
-				<span> ●●● </span>
+				<span>•••</span>
 			</div>		
 		</div>
 		)
