@@ -1,26 +1,21 @@
-<<<<<<< HEAD
 *{
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
-=======
+}
 a{
 	text-decoration:none;
->>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 }
 body,html{
 	width:100%;
 	height:100%;
-<<<<<<< HEAD
 	outline:none;
 a {
     text-decoration: none;
 }
 ul,li{
 	list-style:none;
-=======
     outline: none;
->>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 }
 .l{
 	float:left;
@@ -28,18 +23,10 @@ ul,li{
 .r{
 	float:right;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
 #category{
 
 	
@@ -49,26 +36,26 @@ $base:30px; //html fontsize 就设置成这个值
     	position: relative;
     	z-index: 510;
     	background-color: #fff;
-    	height: 40px;
-    	border-bottom: 1px solid #ccc;
+    	height: px2rem(40px);
+    	border-bottom: px2rem(1px) solid #ccc;
 
 		.back-button {
     		position: absolute;
-    		width: 18px;
-    		line-height: 40px;
+    		width: px2rem(18px);
+    		line-height: px2rem(40px);
     		top: 0;
-    		left: 10px;
+    		left: px2rem(10px);
     		font-weight: 600;
 		}
 
 		.hear-name {
-    		width: 200px;
+    		width: px2rem(200px);
     		text-align: center;
-    		line-height: 40px;
-    		font-size: 16px;
+    		line-height: px2rem(40px);
+    		font-size: px2rem(16px);
     		font-weight: 500;
-    		margin: 0px auto;
-    		height: 40px;
+    		margin: px2rem(0px) auto;
+    		height: px2rem(40px);
     		white-space: nowrap;
     		overflow: hidden;
     		text-overflow: ellipsis;
@@ -76,15 +63,15 @@ $base:30px; //html fontsize 就设置成这个值
 
 		.xiala {
     		position: absolute;
-    		right: 20px;
+    		right: px2rem(20px);
     		top: 0;
-    		width: 22px;
-    		height: 40px;
+    		width: px2rem(22px);
+    		height: px2rem(40px);
 
     		span {
     		display: block;
-    		width: 22px;
-    		line-height: 40px;
+    		width: px2rem(22px);
+    		line-height: px2rem(40px);
     		}
     	}
 
@@ -94,37 +81,37 @@ $base:30px; //html fontsize 就设置成这个值
     		display: block;
     		position: absolute;
     		right: 0px;
-    		top: 40px;
+    		top: px2rem(40px);
     		z-index: 1;
     		background-color: #fff;
 
     		.alert-content{
-    			padding:5px;
+    			padding:px2rem(5px);
 
     			a {
     				display: block;
-    				padding: 5px;
+    				padding: px2rem(5px);
     				text-align: center;
     				text-decoration: none;
     				color: #666;
-    				border-bottom: 1px solid #ccc;
+    				border-bottom: px2rem(1px) solid #ccc;
 				
 					img{
 						float:left;
 						display: inline-block;
-    					width: 25px;
-    					height: 20px;
-    					margin: 5px 5px 5px 0;
+    					width: px2rem(25px);
+    					height: px2rem(20px);
+    					margin: px2rem(5px) px2rem(5px) px2rem(5px) 0;
     					vertical-align: top;
     					background-size: 100%;
 					}
 					span{
 						display: inline-block;
-    					width: 60px;
-    					height: 20px;
-    					margin: 7px 0 3px;
-    					line-height: 20px;
-    					font-size: 14px;
+    					width: px2rem(60px);
+    					height: px2rem(20px);
+    					margin: px2rem(7px) 0 px2rem(3px);
+    					line-height: px2rem(20px);
+    					font-size: px2rem(14px);
 					}
 				}
 
@@ -132,8 +119,4 @@ $base:30px; //html fontsize 就设置成这个值
     		}
 	}
 }
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> f74c0ae0498678ade4617142e4555a5cc2fc36dd
