@@ -78,7 +78,7 @@ $base:30px; //html fontsize 就设置成这个值
     							display: block;
     							width: px2rem(20px);
     							height: px2rem(20px);
-    							margin: 5px auto;
+    							margin: px2rem(5px) auto;
     						}
     					}
     				}
@@ -87,27 +87,27 @@ $base:30px; //html fontsize 就设置成这个值
     		.user{
     			position: absolute;
     			right: 0;
-    			top: 6px;
-    			width: 55px;
-    			height: 42.5px;
+    			top: px2rem(6px);
+    			width: px2rem(55px);
+    			height: px2rem(42.5px);
     			a{
     				display: block;
-    				width: 30px;
-    				height: 30px;
-    				margin: 6px auto 0;
+    				width: px2rem(30px);
+    				height: px2rem(30px);
+    				margin: px2rem(6px) auto 0;
     			}
     		}
     	}
 	}
 	.swipe1{
-		padding-top:50px;
+		padding-top:px2rem(50px);
 		width:100%;
 		position:relative;
     	overflow: hidden;
 	}
 	nav{
 		width: 100%;
-    	height: 54px;
+    	height: px2rem(54px);
     	position: fixed;
     	bottom: 0px;
     	z-index: 100;
@@ -123,7 +123,7 @@ $base:30px; //html fontsize 就设置成这个值
     			background-color: #fff;
     			li{
     				width: 20%;
-    				padding-top: 8px;
+    				padding-top: px2rem(8px);
     				text-align: center;
     				position: relative;
     				a{
@@ -131,12 +131,13 @@ $base:30px; //html fontsize 就设置成这个值
     					color: #666;
     					img{
     						display:block;
-    						width:24px;
-    						height:20px;
-    						margin: 0 auto 2px;
+    						width:px2rem(24px);
+    						height:px2rem(20px);
+    						margin: 0 auto px2rem(2px);
     					}
     					span{
     						color:#666;
+                            font-size:px2rem(14px);
     					}
     				}
     			}
@@ -144,6 +145,7 @@ $base:30px; //html fontsize 就设置成这个值
     				a{
     					span{
     						color: #e5004f;
+                            font-size:px2rem(16px);
     					}
     				}
     			}
