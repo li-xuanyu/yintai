@@ -8,7 +8,6 @@ class App extends React.Component{
 	render(){
 		return(
 			<div id="app">
-				app
 				{this.props.children}
 			</div>	
 		)
