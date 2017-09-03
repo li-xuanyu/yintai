@@ -1,29 +1,10 @@
-*{
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-}
-<<<<<<< HEAD
-body,html{
-	width:100%;
-	height:100%;
-	outline:none;
-=======
-a {
-    text-decoration: none;
->>>>>>> e612fe648d44275bc7f50fd820fba5b192726ecb
-}
-ul,li{
-	list-style:none;
-}
-<<<<<<< HEAD
 a{
 	text-decoration:none;
-=======
+}
 body,html{
 	width:100%;
 	height:100%;
->>>>>>> e612fe648d44275bc7f50fd820fba5b192726ecb
+    outline: none;
 }
 .l{
 	float:left;
@@ -31,12 +12,12 @@ body,html{
 .r{
 	float:right;
 }
-<<<<<<< HEAD
+
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
-=======
+
 #category{
 
 	
@@ -131,4 +112,4 @@ $base:30px; //html fontsize 就设置成这个值
 
 
 }
->>>>>>> e612fe648d44275bc7f50fd820fba5b192726ecb
+
