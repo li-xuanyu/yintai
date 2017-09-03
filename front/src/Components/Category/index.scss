@@ -3,16 +3,27 @@
 	padding:0;
 	box-sizing:border-box;
 }
+<<<<<<< HEAD
 body,html{
 	width:100%;
 	height:100%;
 	outline:none;
+=======
+a {
+    text-decoration: none;
+>>>>>>> e612fe648d44275bc7f50fd820fba5b192726ecb
 }
 ul,li{
 	list-style:none;
 }
+<<<<<<< HEAD
 a{
 	text-decoration:none;
+=======
+body,html{
+	width:100%;
+	height:100%;
+>>>>>>> e612fe648d44275bc7f50fd820fba5b192726ecb
 }
 .l{
 	float:left;
@@ -20,7 +31,104 @@ a{
 .r{
 	float:right;
 }
+<<<<<<< HEAD
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
+=======
+#category{
+
+	
+
+	.yintai-header {
+    	width: 100%;
+    	position: relative;
+    	z-index: 510;
+    	background-color: #fff;
+    	height: 40px;
+    	border-bottom: 1px solid #ccc;
+
+		.back-button {
+    		position: absolute;
+    		width: 18px;
+    		line-height: 40px;
+    		top: 0;
+    		left: 10px;
+    		font-weight: 600;
+		}
+
+		.hear-name {
+    		width: 200px;
+    		text-align: center;
+    		line-height: 40px;
+    		font-size: 16px;
+    		font-weight: 500;
+    		margin: 0px auto;
+    		height: 40px;
+    		white-space: nowrap;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+		}
+
+		.xiala {
+    		position: absolute;
+    		right: 20px;
+    		top: 0;
+    		width: 22px;
+    		height: 40px;
+
+    		span {
+    		display: block;
+    		width: 22px;
+    		line-height: 40px;
+    		}
+    	}
+
+	}
+
+   	.kd-alert {
+    		display: block;
+    		position: absolute;
+    		right: 0px;
+    		top: 40px;
+    		z-index: 1;
+    		background-color: #fff;
+
+    		.alert-content{
+    			padding:5px;
+
+    			a {
+    				display: block;
+    				padding: 5px;
+    				text-align: center;
+    				text-decoration: none;
+    				color: #666;
+    				border-bottom: 1px solid #ccc;
+				
+					img{
+						float:left;
+						display: inline-block;
+    					width: 25px;
+    					height: 20px;
+    					margin: 5px 5px 5px 0;
+    					vertical-align: top;
+    					background-size: 100%;
+					}
+					span{
+						display: inline-block;
+    					width: 60px;
+    					height: 20px;
+    					margin: 7px 0 3px;
+    					line-height: 20px;
+    					font-size: 14px;
+					}
+				}
+
+				
+    		}
+	}
+
+
+}
+>>>>>>> e612fe648d44275bc7f50fd820fba5b192726ecb
