@@ -11,9 +11,7 @@ class Floor1 extends React.Component{
 	componentDidMount() {
 	    axios.get("http://localhost:3000/api/home1").then(res=>{
 	    	this.setState({
-	    		homelist3:res.data.data.templatelist[2].items
-	    	}),
-	    	this.setState({
+	    		homelist3:res.data.data.templatelist[2].items,
 	    		homelist4:res.data.data.templatelist[3].items
 	    	})
 	    })
