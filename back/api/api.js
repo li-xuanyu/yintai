@@ -9,8 +9,6 @@ router.get("/home1",function(req,res){
 	res.send(data);	
 	})
 })
-
-<<<<<<< HEAD
 router.get("/recommend",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	spider("/Services/Proxy.ashx?r=0.30687986934858347&type=5&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
@@ -45,8 +43,6 @@ router.get("/advance",function(req,res){
 	res.send(data);	
 	})
 })
-module.exports=router;
-=======
 
 router.get("/famous1",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
@@ -142,6 +138,3 @@ router.get("/home2",function(req,res){
 
 module.exports=router;
 
-
-
->>>>>>> a75bda780aec31b8ac4650f916aef6afcfabbb48
