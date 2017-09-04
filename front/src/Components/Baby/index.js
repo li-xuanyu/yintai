@@ -7,7 +7,7 @@ class Baby extends React.Component{
 		this.state={
 			brand:[],
 			more:[],
-			recommend:[]
+			recommend:[],			
 
 		}
 	}
@@ -19,8 +19,11 @@ class Baby extends React.Component{
 	    		more:res.data.data.more.morerecommend,
 	    		recommend:res.data.data.recommend.categoryrecommend
 	    	})
-	    	
-	    })
+
+			
+	    });
+
+	    
 	}
 
 	render(){
