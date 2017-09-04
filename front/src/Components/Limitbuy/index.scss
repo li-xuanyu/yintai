@@ -24,3 +24,212 @@ $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
+
+#limitbuy{
+	header {
+		height: px2rem(50px);
+		text-align: center;
+		line-height: px2rem(50px);
+		padding-bottom:px2rem(8px);
+		border-bottom:px2rem(1px) solid #ccc;
+	}
+	nav{
+		
+		border-bottom:px2rem(1px) solid #ccc;
+		.herald{
+			border-right:none;
+		}
+		span{
+			display: inline-block;
+			line-height: px2rem(36px);
+			text-align: center;
+			border-right:px2rem(1px) solid #ccc;
+			height: px2rem(45px);
+			padding:px2rem(2px) px2rem(16px);
+			
+			a{
+				font-size: px2rem(16px);
+				color: #666;
+			}
+			.focus{
+				
+				color: yellow;
+			}
+		}
+	}
+}
+#nowShow {
+	ul{
+		li{
+			position: relative;
+			img{
+				width:100%;
+			}
+			p{
+				font-size: px2rem(14px);
+				height: px2rem(30px);
+				line-height: px2rem(30px);
+			}
+			.discount{
+				position:absolute;
+				left: px2rem(5px);
+				top: px2rem(15px);
+				background: pink;
+				border-radius:0 px2rem(50px) px2rem(50px) 0;
+			}
+		}
+	}
+}
+
+#newest{
+	ul{
+		li{
+			position: relative;
+			img{
+				width:100%;
+			}
+			p{
+				font-size: px2rem(14px);
+				height: px2rem(30px);
+				line-height: px2rem(30px);
+			}
+			.discount_new{
+				position:absolute;
+				left: px2rem(5px);
+				top: px2rem(15px);
+				background: pink;
+				border-radius:0 px2rem(50px) px2rem(50px) 0;
+			}
+		}
+	}
+}
+
+#sale{
+	ul{
+		padding:px2rem(10px);
+		li{
+			overflow: hidden;
+			padding-bottom:px2rem(10px);
+			padding-top:px2rem(10px);
+			border-bottom:px2rem(1px) dashed #ccc;
+			img{
+				width: px2rem(90px);
+				height:px2rem(120px);
+				border:px2rem(1px) solid #ccc;
+			}
+			.intro{
+				float: left;
+				font-size: px2rem(18px);
+				margin-left: px2rem(10px);
+				p{
+					height: px2rem(30px);
+					line-height:px2rem(30px);
+				}
+				.original_cost{
+					text-decoration: line-through;
+				}
+				.special{
+					background:hotpink;
+					border-radius:px2rem(10px);
+					width: px2rem(50px);
+					text-align: center;
+
+				}
+			}
+		}
+	}
+}
+
+#countdown{
+	ul{
+		li{
+			position: relative;
+			img{
+				width: 100%;
+			}
+			p{
+				font-size: px2rem(14px);
+				height: px2rem(30px);
+				line-height: px2rem(30px);
+			}
+			.sale{
+				position:absolute;
+				left: px2rem(5px);
+				top: px2rem(15px);
+				background: pink;
+				border-radius:0 px2rem(50px) px2rem(50px) 0;
+			}
+		}
+	}
+	.bot{
+		background:#ccc;
+		overflow: hidden;
+		.tel{
+			font-size: px2rem(14px);
+			width: 70%;
+			margin:0 auto;
+			margin-top: px2rem(15px);
+		}
+		.address{
+			font-size: px2rem(14px);
+			width: 40%;
+			margin:0 auto;
+		}
+		ul{
+			overflow: hidden;
+			width: 80%;
+			margin:0 auto;
+			li{
+				float: left;
+				margin-left:px2rem(25px);
+				font-size: px2rem(20px);
+				line-height: px2rem(50px);
+				text-align: center;
+				height: px2rem(50px);
+				a{
+					color: white;
+				}
+			}
+		}
+		.register{
+			margin-left: px2rem(30px);
+			border-bottom:px2rem(1px) solid #ccc;
+			overflow: hidden;
+			span{
+				margin-right: px2rem(5px);
+				margin-left: px2rem(5px);
+				a{
+					color: white;
+					font-size: px2rem(20px);
+				}
+			}
+			.customer{
+				color: white;
+				font-size: px2rem(20px);
+				margin-top: px2rem(12px);
+			}
+		}
+	}
+}
+
+#advance{
+	ul{
+		li{
+			position:relative;
+			img{
+				width: 100%;
+			}
+			p{
+				font-size: px2rem(14px);
+			}
+			.discount{
+				position:absolute;
+				left: px2rem(5px);
+				top: px2rem(15px);
+				background: pink;
+				border-radius:0 px2rem(50px) px2rem(50px) 0;
+			
+			}
+		}
+	}
+}
