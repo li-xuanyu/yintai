@@ -17,7 +17,7 @@ class Jewelry extends React.Component{
 	    	this.setState({
 	    		brand:res.data.data.brand.brandrecommend,
 	    		more:res.data.data.more.morerecommend,
-	    		recommend:res.data.data.recommend.categoryrecommend,
+	    		recommend:res.data.data.recommend.categoryrecommend
 	    	})
 
 			
