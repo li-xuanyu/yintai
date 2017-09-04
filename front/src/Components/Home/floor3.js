@@ -85,24 +85,11 @@ class Floor3 extends React.Component{
 		
 		axios.get("http://localhost:3000/api/home2").then(res=>{
 			this.setState({
-				productlist10_bottom:res.data.data.templatelist[1].items
-			}),
-
-			this.setState({
-	    		headlist11:res.data.data.templatelist[2].items
-	    	}),
-
-	    	this.setState({
-	    		productlist11_top:res.data.data.templatelist[3].items
-	    	}),
-
-	    	this.setState({
-	    		productlist11_bottom:res.data.data.templatelist[4].items
-	    	}),
-	    	this.setState({
-	    		bannerlist11:res.data.data.templatelist[5].items
-	    	}),
-	    	this.setState({
+				productlist10_bottom:res.data.data.templatelist[1].items,
+	    		headlist11:res.data.data.templatelist[2].items,
+	    		productlist11_top:res.data.data.templatelist[3].items,
+	    		productlist11_bottom:res.data.data.templatelist[4].items,
+	    		bannerlist11:res.data.data.templatelist[5].items,
 	    		bannerlist12:res.data.data.templatelist[8].items
 	    	})
 		})
