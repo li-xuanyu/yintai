@@ -9,10 +9,11 @@ class Alert extends React.Component{
 	}
 
 	render(){
-		return <div>
-			
+		return <div className="alerts">
+				
 			{
 				this.props.isShow?
+				<div id="bj-alert">
 				<div className="kd-alert">
 				<div className="alert-content" onClick={()=>{
 					this.props.event()
@@ -33,6 +34,7 @@ class Alert extends React.Component{
 						<img src="https://r.ytrss.com/mobile/img/bar-default-my.png" />
 						<span>我的银泰</span>
 					</NavLink>
+				</div>
 				</div>
 				</div>
 				:

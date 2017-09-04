@@ -1,7 +1,7 @@
 //推荐
 import "./index.scss";
 
-class Recommend extends React.Component{
+class Hecommends extends React.Component{
 	constructor(prop){
 		super(prop);
 	}
@@ -9,10 +9,10 @@ class Recommend extends React.Component{
 	render(){
 		return(
 			<div id="recommend">
-				Recommend
+				recommend
 			</div>	
 		)
 	}
 }
 
-export default Recommend;
+export default Recommends;

@@ -10,11 +10,14 @@ import{
 
 import Hear from "./hear-name";
 import Alert from "./alert-content";
+import Seek from "./seek";
+import Mous from "./mous";
 class Category extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state={
-			isShow:false
+			isShow:false,
+			isHide:false
 		}
 	}
 
@@ -23,12 +26,13 @@ class Category extends React.Component{
 			<div id="category">
 				<Hear event={this.handleClick.bind(this)}></Hear>
 				<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
-				<section>
-				
+				<Seek></Seek>
+				<section id="recom">
+				<Mous></Mous>
+				{this.props.children}
 				</section>
 				
 			</div>
-			
 		)
 	}
 
@@ -37,6 +41,7 @@ class Category extends React.Component{
 			isShow:!this.state.isShow
 		})
 	}
+
 }
 
 export default Category;
