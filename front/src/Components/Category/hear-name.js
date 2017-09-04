@@ -9,14 +9,12 @@ class Hear extends React.Component{
 	render(){
 		return (
 		<div className="yintai-header">
-			<NavLink to="/home" className="back-button"onClick={()=>{
-				this.props.event()
-			}}>＜</NavLink>
+			<NavLink to="/home" className="back-button">＜</NavLink>
 			<div className="hear-name">分类</div>
 			<div className="xiala r" onClick={()=>{
 				this.props.event()
 			}}>
-				<span>•••</span>
+				<span>···</span>
 			</div>		
 		</div>
 		)

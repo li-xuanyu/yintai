@@ -3,15 +3,15 @@
 	padding:0;
 	box-sizing:border-box;
 }
-a{
-	text-decoration:none;
-}
 body,html{
 	width:100%;
 	height:100%;
 	outline:none;
 a {
     text-decoration: none;
+}
+input{
+    outline:none;
 }
 ul,li{
 	list-style:none;
@@ -28,12 +28,14 @@ $base:30px; //html fontsize 就设置成这个值
   @return $px/$base *1rem;
 }
 #category{
-
+    width: 100%;
 	
 
 	.yintai-header {
     	width: 100%;
-    	position: relative;
+        position: fixed;
+        top:0;
+        left:0;
     	z-index: 510;
     	background-color: #fff;
     	height: px2rem(40px);
@@ -52,7 +54,7 @@ $base:30px; //html fontsize 就设置成这个值
     		width: px2rem(200px);
     		text-align: center;
     		line-height: px2rem(40px);
-    		font-size: px2rem(16px);
+    		font-size: px2rem(18px);
     		font-weight: 500;
     		margin: px2rem(0px) auto;
     		height: px2rem(40px);
@@ -63,12 +65,12 @@ $base:30px; //html fontsize 就设置成这个值
 
 		.xiala {
     		position: absolute;
-    		right: px2rem(20px);
+    		right: px2rem(10px);
     		top: 0;
     		width: px2rem(22px);
     		height: px2rem(40px);
 
-    		span {
+    		img {
     		display: block;
     		width: px2rem(22px);
     		line-height: px2rem(40px);
@@ -77,46 +79,327 @@ $base:30px; //html fontsize 就设置成这个值
 
 	}
 
-   	.kd-alert {
-    		display: block;
-    		position: absolute;
-    		right: 0px;
-    		top: px2rem(40px);
-    		z-index: 1;
-    		background-color: #fff;
+    #bj-alert{
+        position:fixed;
+        z-index: 15;
+        right: 0;
+        top: px2rem(40px);
+        display: block;
+        width: px2rem(375px);
+        height: px2rem(637px);
+        background-color:rgba(0,0,0,.1);
 
-    		.alert-content{
-    			padding:px2rem(5px);
+        .kd-alert {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            background-color: #fff;
 
-    			a {
-    				display: block;
-    				padding: px2rem(5px);
-    				text-align: center;
-    				text-decoration: none;
-    				color: #666;
-    				border-bottom: px2rem(1px) solid #ccc;
-				
-					img{
-						float:left;
-						display: inline-block;
-    					width: px2rem(25px);
-    					height: px2rem(20px);
-    					margin: px2rem(5px) px2rem(5px) px2rem(5px) 0;
-    					vertical-align: top;
-    					background-size: 100%;
-					}
-					span{
-						display: inline-block;
-    					width: px2rem(60px);
-    					height: px2rem(20px);
-    					margin: px2rem(7px) 0 px2rem(3px);
-    					line-height: px2rem(20px);
-    					font-size: px2rem(14px);
-					}
-				}
+            .alert-content{
+                padding:px2rem(5px);
 
-				
-    		}
-	}
+                a {
+                    display: block;
+                    padding: px2rem(5px);
+                    text-align: center;
+                    text-decoration: none;
+                    color: #666;
+                    border-bottom: px2rem(1px) solid #ccc;
+                    line-height: px2rem(20px);
+                    img{
+                        display: inline-block;
+                        width: px2rem(25px);
+                        height: px2rem(20px);
+                        margin: px2rem(5px) px2rem(5px) px2rem(5px) 0;
+                        vertical-align: top;
+                        background-size: 100%;
+                    }
+                    span{
+                        display: inline-block;
+                        width: px2rem(60px);
+                        height: px2rem(20px);
+                        margin: px2rem(7px) 0 px2rem(3px);
+                        line-height: px2rem(20px);
+                        font-size: px2rem(14px);                      
+                    }
+                }
+
+                
+            }
+        }
+    }
+    }
+
+    
+    #headers {
+        width:100%;
+        position: fixed;
+        top:px2rem(40px);
+        left:0;
+        z-index: 6;
+        background: #fff;
+        border-bottom: px2rem(1px) solid #d2d2d2;
+        padding: px2rem(10px);
+
+        .sea-min {
+            height: px2rem(42px);
+            border: px2rem(1px) solid #d2d2d2;
+            border-radius: px2rem(5px);
+            .sea-txt {
+                position: relative;
+                padding: px2rem(6px);
+                input {
+                    width: 100%;
+                    display: block;
+                    padding-right: px2rem(50px);
+                    height: px2rem(30px);
+                    color: #cacaca;
+                    border:0;
+                    font-size: px2rem(16px);
+                }
+                span {
+                    position: absolute;
+                    right: px2rem(5px);
+                    top: px2rem(6px);
+                    width: px2rem(36px);
+                    height: px2rem(30px);
+                    padding-left: px2rem(5px);
+                    border-left: px2rem(1px) solid #ddd;
+                    img {
+                        display: block;
+                        width: px2rem(20px);
+                        height: px2rem(20px);
+                        margin: px2rem(5px) auto;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+    
+    } 
+    
+    #recom{
+        position: relative;
+        top:px2rem(100px);
+        left:0;
+        z-index: 3;
+        width: 100%;
+        height: px2rem(563px); 
+        
+        .famous{
+            overflow-y: auto;
+            width: 25%;
+            height: 100%;
+            float: left;
+            .famousul{
+                width: 100%;
+                background-color: #f5f5f5;
+                
+                li{
+                    width: 100%;
+                    height: px2rem(55px);
+                    text-align: center;
+                    a{
+                        display: block;
+                        height: px2rem(55px);
+                        line-height: px2rem(55px);
+                        font-size: px2rem(14px);
+                        border-right: px2rem(1px) solid #d2d2d2;
+                        color: #333;
+                    }
+                }
+            }
+
+            .famouslist{
+                border-right: px2rem(1px) solid #fff!important;
+                background-color: #fff!important;
+                color: #e5004f!important;
+            }
+        }
+
+        
+        .zhezhao{
+            width: 74.9%;
+            height: 100%;
+            background-color: rgba(0,0,0,.1);
+            position:absolute;
+            z-index: 22;
+            display: block;
+            right: 0;
+
+        }
+
+        .mous{
+            width: 74.9%;
+            background-color: #fff;
+            height: 100%;
+            overflow-y: auto;
+            position:absolute;
+            right: 0;
+            z-index: 7;
+
+            .recommends{
+                float: left;
+                width: 100%;
+                padding: 0 px2rem(10px);
+                position:relative;
+
+                .area-title {
+                    font-size: px2rem(16px);
+                    text-align: center;
+                    margin-top: px2rem(15px);
+                    height: px2rem(35px);
+                    line-height: px2rem(35px);
+                    width: 100%;
+                    color: #666;
+                    
+                    img{
+                        float:left;
+                        display: block;
+                        width: 99%;
+                        height: px2rem(35px);
+                    }
+                    .lei{
+                        float:left;
+                        display: block;
+                        position:absolute;
+                        z-index: 12;
+                        padding: 0 8px;
+                        background-color: #fff;
+                        margin-left: 34%;
+                    }
+                }
+                .category-item{
+                    width: 33%;
+                    float: left;
+                    text-align: center;
+                    padding: 15px 0;
+                    text-align: center;
+
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                    a{
+                        display: block;
+                        margin-top: 10px;
+                        color: #666;
+                        font-size: px2rem(14px);
+                    }
+                }
+            }
+
+            .brands{
+                float: left;
+                width: 100%;
+                padding: 0 px2rem(10px);
+                position:relative;
+
+                .area-title {
+                    font-size: px2rem(16px);
+                    text-align: center;
+                    margin-top: px2rem(15px);
+                    height: px2rem(35px);
+                    line-height: px2rem(35px);
+                    width: 100%;
+                    color: #666;
+                    
+                    
+                    img{
+                        float:left;
+                        display: block;
+                        width: 99%;
+                        height: px2rem(35px);
+                    }
+                    .pin{
+                        float:left;
+                        display: block;
+                        position:absolute;
+                        z-index: 12;
+                        padding: 0 8px;
+                        background-color: #fff;
+                        margin-left: 34%;
+                    }
+                }
+                .category-item{
+                    width: 33%;
+                    height: px2rem(74px);
+                    float: left;
+                    text-align: center;
+                    padding: px2rem(15px) 0;
+                    text-align: center;
+                    img{
+                        display: block;
+                        border: px2rem(1px) solid #d2d2d2;
+                        margin: 0 auto;
+                        width: 85%;
+                    }
+
+                }
+            }
+
+            .mores{
+                float: left;
+                width: 100%;
+                padding: 0 px2rem(10px);
+                position:relative;
+
+                .area-title {
+                    font-size: px2rem(16px);
+                    text-align: center;
+                    margin-top: px2rem(15px);
+                    height: px2rem(35px);
+                    line-height: px2rem(35px);
+                    width: 100%;
+                    color: #666;
+                    
+                    
+                    img{
+                        float:left;
+                        display: block;
+                        width: 99%;
+                        height: px2rem(35px);
+                    }
+                    .pin{
+                        float:left;
+                        display: block;
+                        position:absolute;
+                        z-index: 12;
+                        padding: 0 8px;
+                        background-color: #fff;
+                        margin-left: 34%;
+                    }
+                }
+                .category-item{
+                    width: 33%;
+                    height: px2rem(55px);
+                    float: left;
+                    text-align: center;
+                    a{
+                        margin:0 auto;
+                        display: block;
+                        font-size: px2rem(14px);
+                        line-height: px2rem(55px);
+                        color: #666;
+                        width:  80%;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow:ellipsis;
+
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+
+    
+   
 }
-}
+
+

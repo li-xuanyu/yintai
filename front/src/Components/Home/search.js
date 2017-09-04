@@ -14,7 +14,7 @@ class Search extends React.Component{
 					<div className="search">
 						<div className="sea-min">
 							<div className="sea-txt">
-								<input type="text" value="搜索商品or品牌" id="keyword" onChange={()=>{
+								<input type="text" placeholder="搜索商品or品牌" id="keyword" onChange={()=>{
 									
 								}}/>
 								<span id="btn">

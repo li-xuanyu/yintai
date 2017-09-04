@@ -18,6 +18,7 @@ componentDidMount() {
 }
 	render(){
 		return(
+<<<<<<< HEAD
 			<div id="nowShow">
 				<ul>
 					{this.state.recommendlist.map(item=>
@@ -31,6 +32,10 @@ componentDidMount() {
 
 						)}
 				</ul>
+=======
+			<div id="recommend">
+				Recommend
+>>>>>>> a75bda780aec31b8ac4650f916aef6afcfabbb48
 			</div>	
 		)
 	}
