@@ -30,6 +30,7 @@ import Outdoor from "./Components/Outdoor";
 import Jewelry from "./Components/Jewelry";
 import Baby from "./Components/Baby";
 import House from "./Components/House";
+import Details from "./Components/Details";
 
 //用router包裹我们的根组件
 const router=(
@@ -67,11 +68,11 @@ const router=(
 								<Route path="/category/house" component={House}/>//家居家纺
 								<Redirect from="/category" to="/category/famous"/>
 							</Switch>
-						</Category>
+						</Category> 
 					}/>
 
 					<Route path="/cart" component={Cart}/>
-
+					<Route path="/details" component={Details}/>
 					<Route path="/mine" component={Mine}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>

@@ -1,4 +1,4 @@
-//购物车
+ //购物车
 import "./index.scss";
 
 class Cart extends React.Component{
