@@ -26,7 +26,7 @@ class Swipe1 extends React.Component{
 				{
 				this.state.homelist1.map(item=>
 				<NavLink to={item.jumpurl} key={item.id}>	
-				<img src={item.imgurl} key={item.id}/>
+				<img src={item.imgurl}/>
 				</NavLink>
 				)
 				}
