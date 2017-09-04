@@ -40,7 +40,9 @@ class Footer extends React.Component{
 					</p>
 					<p>浙ICP备10200233号</p>
 				</div>
+				{
 
+				}
 				<div className="gotop">
 				<a href='javascript:;'></a>
 				</div>
