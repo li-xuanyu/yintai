@@ -43,10 +43,10 @@ const router=(
 						<Limitbuy>
 							<Switch>
 								<Route path="/limitbuy/recommend" component={Recommend}/>//推荐
-								<Route path="/limitbuy/newest" component={Newest}/>//最新
-								<Route path="/limitbuy/specialsale" component={Specialsale}/>//特卖爆推
+								<Route path="/limitbuy/latest" component={Newest}/>//最新
+								<Route path="/limitbuy/tmbt" component={Specialsale}/>//特卖爆推
 								<Route path="/limitbuy/countdown" component={Countdown}/>//倒计时
-								<Route path="/limitbuy/advance" component={Advance}/>//预告
+								<Route path="/limitbuy/herald" component={Advance}/>//预告
 								<Redirect from="/limitbuy" to="/limitbuy/recommend"/>
 							</Switch>
 						</Limitbuy>

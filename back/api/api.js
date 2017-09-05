@@ -9,7 +9,40 @@ router.get("/home1",function(req,res){
 	res.send(data);	
 	})
 })
+router.get("/recommend",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.30687986934858347&type=5&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
 
+router.get("/newest",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.4606597812287532&type=5&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
+router.get("/specialsale",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.9018027001873778&type=3&pageindex=1&pagesize=30&methodName=products.getrecommendedproductlist_1.2.0&method=products.getrecommendedproductlist&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
+router.get("/countdown",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.47881123421291094&type=4&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
+router.get("/advance",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.41940738537470135&type=2&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
 
 router.get("/famous1",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
@@ -107,6 +140,7 @@ router.get("/address",function(req,res){
 	res.header("Access-Control-Allow-Origin","*"); 
 	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-423-9168%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=201790422",function(data){
 	res.send(data);
+
 
 	})
 })

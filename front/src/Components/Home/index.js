@@ -13,6 +13,7 @@ import Nav from "./nav";
 class Home extends React.Component{
 	constructor(prop){
 		super(prop);
+		
 	}
 	render(){
 		return(
