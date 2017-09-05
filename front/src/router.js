@@ -48,8 +48,7 @@ const router=(
 		<Router>
 			<App>
 				<Switch>
-					<Route path="/home2" component={Home}/>
-
+						<Route path="/home" component={Home}/>
 					<Route path="/limitbuy" render={()=>
 						<Limitbuy>
 							<Switch>
@@ -85,6 +84,7 @@ const router=(
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>					<Route path="/mine" component={Mine}/>
 					<Route path="/product" render={()=>
+						
 						<Product>
 						<Switch>
 							<Route path="/product/default" component={Default}/>
