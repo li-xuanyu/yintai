@@ -155,6 +155,7 @@ $base:30px; //html fontsize 就设置成这个值
             padding:px2rem(5px) px2rem(3px);
             .pro-one{
                 width:20%;
+                position:relative;
                 padding:0 px2rem(2px) 0 0;
                 background:#fff;
                 .pro-img{
@@ -179,6 +180,15 @@ $base:30px; //html fontsize 就设置成这个值
                         margin-right: px2rem(8px);
                         color: #e5004f;
                     }
+                }
+                .pro-prom{
+                    position: absolute;
+                    top: px2rem(-1px);
+                    left: px2rem(-1px);
+                    padding: px2rem(4px) px2rem(8px);
+                    font-size: px2rem(12px);
+                    background-color: #ff3b7f;
+                    color: #fff;
                 }
             }
         }

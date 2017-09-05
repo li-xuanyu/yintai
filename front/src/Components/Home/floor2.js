@@ -1,3 +1,4 @@
+import ReactSwipe from 'react-swipe';
 import {NavLink} from "react-router-dom";
 class Floor2 extends React.Component{
 	constructor (prop){
@@ -5,7 +6,8 @@ class Floor2 extends React.Component{
 		this.state={
 			floorlist2_head:[],
 			floorlist2_content:[],
-			floorlist2_content1:[]
+			floorlist2_content1:[],
+			bannerlist2:[]
 		}
 	}
 
@@ -14,7 +16,8 @@ class Floor2 extends React.Component{
 	    	this.setState({
 	    		floorlist2_head:res.data.data.templatelist[5].items,
 	    		floorlist2_content:res.data.data.templatelist[6].items,
-	    		floorlist2_content1:res.data.data.templatelist[7].items
+	    		floorlist2_content1:res.data.data.templatelist[7].items,
+	    		bannerlist2:res.data.data.templatelist[8].items
 	    	})
 	    })
 	}
@@ -49,6 +52,15 @@ class Floor2 extends React.Component{
 							<img src={item.imgurl}/>
 							</NavLink>
 						</div>
+					)
+				}
+				</div>
+				<div className="head">
+				{
+					this.state.bannerlist2.map(item=>
+						<NavLink to={item.jumpurl} key={item.itemid}>
+						<img src={item.imgurl}/>
+						</NavLink>
 					)
 				}
 				</div>

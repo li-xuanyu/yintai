@@ -136,12 +136,20 @@ router.get("/home2",function(req,res){
 	})
 })
 
-router.get("/clears",function(req,res){
+router.get("/default",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.15181752262363646&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})router.get("/clears",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
 	res.send(data);	
 
 	})
 })
+
+
 module.exports=router;
 
