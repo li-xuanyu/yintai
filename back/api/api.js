@@ -142,7 +142,8 @@ router.get("/default",function(req,res){
 	res.send(data);	
 
 	})
-})router.get("/clears",function(req,res){
+})
+router.get("/clears",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
 	res.send(data);	
