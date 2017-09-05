@@ -18,12 +18,13 @@ module.exports = {
         contentBase: "./",  //content not from webpack is serverd
         port: '8888',
         historyApiFallback: true,
-
+        
         //反向代理
+
         // proxy:{
-        //    '/Services/*': {
-        //           target: 'https://m.yintai.com',
-        //           host: 'm.yintai.com',
+        //    '/facade/json/*': {
+        //           target: 'https://recommend-prod.yintai.com',
+        //           host: 'recommend-prod.yintai.com',
         //           changeOrigin:true
         //       }
         // }

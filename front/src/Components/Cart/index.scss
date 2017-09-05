@@ -24,3 +24,193 @@ $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
+#cart{
+	width:100%;
+
+	.cart-header {
+    	width: 100%;
+        position: relative;
+        top:0;
+        left:0;
+    	z-index: 510;
+    	background-color: #fff;
+    	height: px2rem(40px);
+    	border-bottom: px2rem(1px) solid #ccc;
+
+		.back-button {
+			float: left;
+    		width: px2rem(16px);
+    		line-height: px2rem(40px);
+    		left: px2rem(10px);
+    		margin-right: px2rem(20px);
+    		color:#333;
+		}
+
+		.hear-name {
+    		width: px2rem(100px);
+    		text-align: center;
+    		line-height: px2rem(40px);
+    		font-size: px2rem(18px);
+    		font-weight: 500;
+    		margin: px2rem(0px) auto;
+    		height: px2rem(40px);
+		}
+
+		
+	}
+
+	#clear{
+		position:relative;
+        z-index: 14;
+        width: 100%;
+
+		#allprod{
+			float: left;
+        	display: block;
+        	width: 100%;
+
+			.fir-sig-redu {
+				width: 100%;
+    			height: px2rem(30px);
+    			line-height: px2rem(30px);
+    			text-align: center;
+    			font-size: px2rem(14px);
+    			color: #666;
+				background: #ffe9f1;
+    			img{
+    				display: block;
+    				height: px2rem(18px);
+    				width: px2rem(18px);
+    				margin:px2rem(5px) px2rem(10px);
+    				background-size:100%;
+    			}
+    			span{
+    				margin: 0 auto;
+    				span{
+    					color:red;
+    					padding: 0 px2rem(5px);
+    				}
+    			}
+			}	
+		}	
+
+		.clear-cart {
+			float: left;
+    	    display: block;
+    	    width: 100%;
+
+    		.clear-tip {
+    			width: 100%;
+    			text-align: center;
+    			color: #666;
+    			padding: px2rem(100px) 0 px2rem(20px);
+    			
+    			img{
+    				line-height: 1.6rem;
+    				display: block;
+    				background-size: px2rem(110px);
+    				margin: 0 auto;
+    				padding-bottom:px2rem(20px);
+    			}
+    			p{
+    				font-size: px2rem(16px);
+    			}
+			}
+			
+			.clear-button {
+    			width: 100%;
+    			text-align: center;
+    			a {
+    				display: block;
+    				width: px2rem(200px);
+    				padding: px2rem(12px) 0;
+    				border-radius: px2rem(5px);
+    				border: px2rem(1px) solid #e5004f;
+    				color: #e5004f;
+    				margin:0 auto;
+    				font-size:px2rem(14px);
+				}
+			}
+	
+		}
+
+		.rec-title {
+			margin-top: px2rem(30px);
+			float: left;
+    		width: 100%;
+    		color: #666;
+    		font-size: px2rem(13px);
+    		text-align: center;
+
+    		legend {
+    			position:relative;
+    			border: 0;
+    			border-top: px2rem(1px) solid #999;
+    			width: px2rem(220px);
+    			display: block;
+    			height: px2rem(20px);
+    			margin: 0 auto;
+    			
+    			div{
+    				position:absolute;
+    				top:px2rem(-10px);
+    				left:50%;
+    				margin-left:px2rem(-50px);
+    				z-index: 20;
+    				text-align: center;
+    				line-height: px2rem(20px);
+    				padding: 0 px2rem(5px);
+    				background:#eee;
+
+    				img{
+    					float: left;
+    					width: px2rem(20px);
+    					height: px2rem(20px);
+    					margin-right:px2rem(10px);
+    				}
+    				span{
+    					float: left;
+    				}
+    			}    		
+			}
+
+			.rec-set{
+				width: 100%;
+				display: block;
+    			margin: 0 auto;
+    			text-align: center;
+    			margin-top: px2rem(10px);
+
+                .rec-list{
+                    float: left;
+                    width: 31%;
+                    margin: 1.8% 0 0 1.8%;
+                    background:#fff;
+                    padding-bottom:px2rem(10px);
+
+                    img{
+                        width: 100%;
+                    }
+                    span{
+                        color: #333;
+                        font-size: px2rem(12px);
+                        line-height: 1.4em;
+                        height: 2.9em;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical; 
+                    }
+                }
+    			
+			}
+		}
+	
+	}
+
+	
+	
+	
+
+}
