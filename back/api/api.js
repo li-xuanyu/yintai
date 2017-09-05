@@ -136,14 +136,5 @@ router.get("/home2",function(req,res){
 	})
 })
 
-router.get("/address",function(req,res){
-	res.header("Access-Control-Allow-Origin","*"); 
-	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-423-9168%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=201790422",function(data){
-	res.send(data);
-
-
-	})
-})
-
 module.exports=router;
 
