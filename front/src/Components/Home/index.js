@@ -23,7 +23,6 @@ class Home extends React.Component{
 				<Funcarea></Funcarea>
 				<Floor1></Floor1>
 				<Floor2></Floor2>
-				<Swipe2></Swipe2>
 				<Floor3></Floor3>
 				<Main></Main>
 				<Footer></Footer>
