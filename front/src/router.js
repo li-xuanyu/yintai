@@ -16,6 +16,7 @@ import Cart from "./Components/Cart";//购物车
 import Mine from "./Components/Mine";//我的银泰
 import Passport from "./Components/Passport";
 import Accont from "./Components/Accont";
+import Register from "./Components/Register";
 import Recommend from "./Components/Recommend";
 import Newest from "./Components/Newest";
 import Specialsale from "./Components/Specialsale";
@@ -82,9 +83,7 @@ const router=(
 					}/>
 					
 					<Route path="/cart" component={Cart}/>
-					<Route path="/details" component={Details}/>
-
-					<Route path="/mine" component={Mine}/>
+					<Route path="/details" component={Details}/>					<Route path="/mine" component={Mine}/>
 					<Route path="/product" render={()=>
 						
 						<Product>
@@ -97,9 +96,6 @@ const router=(
 							<Redirect from="/product" to="/product/default"/>
 							</Switch>
 						</Product>
-					}/>
-
-
 					<Route path="/mine" render={()=>
 						<Mine>
 							<Switch>
@@ -107,9 +103,7 @@ const router=(
 								<Route path="/mine/accont" component={Accont}/>//银泰账号
 								<Redirect from="/mine" to="/mine/passport"/>
 							</Switch>
-						</Mine>
-
-					}/>
+						</Mine>					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>
 			</App>

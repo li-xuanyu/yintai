@@ -1,7 +1,7 @@
 var express=require('express');
 var router=express.Router();
 var spider=require("./spider");
-
+var recom=require("./recom");
 //首页数据
 router.get("/home1",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
@@ -123,7 +123,7 @@ router.get("/badys",function(req,res){
 
 router.get("/house",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	spider("https://m.yintai.com/Services/Proxy.ashx?r=0.7927333240386347&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=4",function(data){
+	spider("/Services/Proxy.ashx?r=0.7927333240386347&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=4",function(data){
 		res.send(data);
 	})
 })
@@ -143,5 +143,14 @@ router.get("/default",function(req,res){
 
 	})
 })
+router.get("/clears",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
+	res.send(data);	
+
+	})
+})
+
+
 module.exports=router;
 
