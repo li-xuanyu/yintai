@@ -136,5 +136,12 @@ router.get("/home2",function(req,res){
 	})
 })
 
+router.get("/default",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.15181752262363646&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})
 module.exports=router;
 
