@@ -14,6 +14,8 @@ import Limitbuy from "./Components/Limitbuy";//抢先
 import Category from "./Components/Category";//分类
 import Cart from "./Components/Cart";//购物车
 import Mine from "./Components/Mine";//我的银泰
+import Passport from "./Components/Passport";
+import Accont from "./Components/Accont";
 import Recommend from "./Components/Recommend";
 import Newest from "./Components/Newest";
 import Specialsale from "./Components/Specialsale";
@@ -47,7 +49,7 @@ const router=(
 								<Route path="/limitbuy/tmbt" component={Specialsale}/>//特卖爆推
 								<Route path="/limitbuy/countdown" component={Countdown}/>//倒计时
 								<Route path="/limitbuy/herald" component={Advance}/>//预告
-								<Redirect from="/limitbuy" to="/limitbuy/recommend"/>
+								<Redirect from="/limitbuy" to="/limitbuy/recommend"/>				
 							</Switch>
 						</Limitbuy>
 					}/>
@@ -73,7 +75,15 @@ const router=(
 
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
-					<Route path="/mine" component={Mine}/>
+					<Route path="/mine" render={()=>
+						<Mine>
+							<Switch>
+								<Route path="/mine/passport" component={Passport}/>//银泰护照
+								<Route path="/mine/accont" component={Accont}/>//银泰账号
+								<Redirect from="/mine" to="/mine/passport"/>
+							</Switch>
+						</Mine>
+					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>
 			</App>
