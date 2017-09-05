@@ -83,7 +83,7 @@ const router=(
 					
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
-<<<<<<< HEAD
+
 					<Route path="/mine" component={Mine}/>
 					<Route path="/product" render={()=>
 						<Product>
@@ -96,8 +96,9 @@ const router=(
 							<Redirect from="/product" to="/product/default"/>
 							</Switch>
 						</Product>
+					}/>
 
-=======
+
 					<Route path="/mine" render={()=>
 						<Mine>
 							<Switch>
@@ -106,7 +107,7 @@ const router=(
 								<Redirect from="/mine" to="/mine/passport"/>
 							</Switch>
 						</Mine>
->>>>>>> baa46109f3dcc0ae41f942ca40394e1fe5e9e502
+
 					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>
