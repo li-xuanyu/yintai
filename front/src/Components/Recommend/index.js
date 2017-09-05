@@ -1,5 +1,4 @@
 //推荐
-import "./index.scss";
 import{
 	BrowserRouter as Router,
 	Route,

@@ -84,12 +84,16 @@ const router=(
 					<Route path="/mine" component={Mine}/>
 					<Route path="/product" render={()=>
 						<Product>
+						<Switch>
 							<Route path="/product/default" component={Default}/>
 							<Route path="/product/sales" component={Default}/>
 							<Route path="/product/price" component={Default}/>
 							<Route path="/product/discount" component={Default}/>
 							<Route path="/product/choose" component={Default}/>
+							<Redirect from="/product" to="/product/default"/>
+							</Switch>
 						</Product>
+
 					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>

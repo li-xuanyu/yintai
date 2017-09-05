@@ -58,4 +58,50 @@ $base:30px; //html fontsize 就设置成这个值
 	
 	}
 
+	#default{
+	ul{
+		padding:px2rem(10px);
+		li{
+			overflow: hidden;
+			height: 100%;
+			padding-bottom:px2rem(10px);
+			padding-top:px2rem(10px);
+			border-bottom:px2rem(1px) dashed #ccc;
+			img{
+				width: px2rem(90px);
+				height:px2rem(120px);
+				border:px2rem(1px) solid #ccc;
+			}
+			.intro{
+				width: 70%;
+				float: left;
+				margin-left: px2rem(10px);
+				p{
+					font-size: px2rem(16px);
+				}
+				.original_cost{
+					text-decoration: line-through;
+					height: px2rem(20px);
+				}
+				.special{
+					background:hotpink;
+					border-radius:px2rem(10px);
+					width: px2rem(50px);
+					text-align: center;
+					height: px2rem(20px);
+					line-height: px2rem(20px);
+
+				}
+				.name{
+					font-size: px2rem(16px);
+					height: px2rem(65px);
+				}
+			}
+		}
+	}
 }
+
+
+
+}
+
