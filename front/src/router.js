@@ -31,6 +31,14 @@ import Jewelry from "./Components/Jewelry";
 import Baby from "./Components/Baby";
 import House from "./Components/House";
 import Details from "./Components/Details";
+import Default from "./Components/Default";
+import Sales from "./Components/Sales";
+import Price from "./Components/Price";
+import Discount from "./Components/Discount";
+import Choose from "./Components/Choose";
+import Product from "./Components/Product";
+
+
 
 //用router包裹我们的根组件
 const router=(
@@ -70,10 +78,19 @@ const router=(
 							</Switch>
 						</Category> 
 					}/>
-
+					
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
 					<Route path="/mine" component={Mine}/>
+					<Route path="/product" render={()=>
+						<Product>
+							<Route path="/product/default" component={Default}/>
+							<Route path="/product/sales" component={Default}/>
+							<Route path="/product/price" component={Default}/>
+							<Route path="/product/discount" component={Default}/>
+							<Route path="/product/choose" component={Default}/>
+						</Product>
+					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>
 			</App>

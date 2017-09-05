@@ -1,6 +1,12 @@
 //推荐
 import "./index.scss";
-
+import{
+	BrowserRouter as Router,
+	Route,
+	Redirect,
+	Switch,
+	NavLink
+} from 'react-router-dom';
 class Recommend extends React.Component{
 	constructor(prop){
 		super(prop);
@@ -21,12 +27,14 @@ componentDidMount() {
 			<div id="nowShow">
 				<ul>
 					{this.state.recommendlist.map(item=>
-						<li key={item.id}>
-							<img src={item.imgurl}/>
-							<p>{item.name}</p>
-							<p className="discount">{item.discount}</p>
+						<NavLink to="/product">
+							<li key={item.id}>
+								<img src={item.imgurl}/>
+								<p>{item.name}</p>
+								<p className="discount">{item.discount}</p>
 
-						</li>
+							</li>
+						</NavLink>
 
 
 						)}
