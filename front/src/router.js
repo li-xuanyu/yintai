@@ -48,7 +48,7 @@ const router=(
 		<Router>
 			<App>
 				<Switch>
-					<Route path="/home" component={Home}/>
+					<Route path="/home2" component={Home}/>
 
 					<Route path="/limitbuy" render={()=>
 						<Limitbuy>
