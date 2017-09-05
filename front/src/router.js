@@ -83,12 +83,7 @@ const router=(
 					}/>
 					
 					<Route path="/cart" component={Cart}/>
-					<Route path="/details" component={Details}/>
-
-					<Route path="/register" component={Register}/>//注册
-
-
-					<Route path="/mine" component={Mine}/>
+					<Route path="/details" component={Details}/>					<Route path="/mine" component={Mine}/>
 					<Route path="/product" render={()=>
 						<Product>
 						<Switch>
@@ -100,8 +95,6 @@ const router=(
 							<Redirect from="/product" to="/product/default"/>
 							</Switch>
 						</Product>
-					}/>	
-
 					<Route path="/mine" render={()=>
 						<Mine>
 							<Switch>
@@ -109,8 +102,7 @@ const router=(
 								<Route path="/mine/accont" component={Accont}/>//银泰账号
 								<Redirect from="/mine" to="/mine/passport"/>
 							</Switch>
-						</Mine>
-					}/>
+						</Mine>					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>
 			</App>
