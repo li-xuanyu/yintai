@@ -82,9 +82,8 @@ const router=(
 					}/>
 					
 					<Route path="/cart" component={Cart}/>
-					<Route path="/details" component={Details}/>					<Route path="/mine" component={Mine}/>
+					<Route path="/details" component={Details}/>
 					<Route path="/product" render={()=>
-						
 						<Product>
 						<Switch>
 							<Route path="/product/default" component={Default}/>
@@ -95,14 +94,16 @@ const router=(
 							<Redirect from="/product" to="/product/default"/>
 							</Switch>
 						</Product>
-					<Route path="/mine" render={()=>
+					}/>
+						<Route path="/mine" render={()=>
 						<Mine>
 							<Switch>
 								<Route path="/mine/passport" component={Passport}/>//银泰护照
 								<Route path="/mine/accont" component={Accont}/>//银泰账号
 								<Redirect from="/mine" to="/mine/passport"/>
 							</Switch>
-						</Mine>					}/>
+						</Mine>					
+					}/>
 					<Redirect from="/" to="/home"/>
 				</Switch>
 			</App>
