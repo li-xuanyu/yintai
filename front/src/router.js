@@ -16,6 +16,7 @@ import Cart from "./Components/Cart";//购物车
 import Mine from "./Components/Mine";//我的银泰
 import Passport from "./Components/Passport";
 import Accont from "./Components/Accont";
+import Register from "./Components/Register";
 import Recommend from "./Components/Recommend";
 import Newest from "./Components/Newest";
 import Specialsale from "./Components/Specialsale";
@@ -75,6 +76,7 @@ const router=(
 
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
+					<Route path="/register" component={Register}/>//注册
 					<Route path="/mine" render={()=>
 						<Mine>
 							<Switch>
