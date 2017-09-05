@@ -21,7 +21,7 @@ class Passport extends React.Component{
 					<div id="login">登 录</div>
 					<div className="login-reg">
 						<a className="forget-word l">忘记密码?</a>
-						<a className="register r">注册</a>
+						<a className="register r" href="/register">注册</a>
 					</div>
 					<p className="word l">银泰护照即银泰门店会员账号，一般为手机号，如未设置过密码或忘记密码可点击“忘记密码”进行找回。</p>
 					<p className="word l">
