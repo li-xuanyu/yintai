@@ -1,3 +1,4 @@
+import ReactSwipe from 'react-swipe';
 import {NavLink} from "react-router-dom";
 class Floor3 extends React.Component{
 	constructor(prop){
@@ -72,25 +73,25 @@ class Floor3 extends React.Component{
 	    		productlist7_top:res.data.data.templatelist[36].items,
 	    		productlist7_bottom:res.data.data.templatelist[37].items,
 	    		bannerlist7:res.data.data.templatelist[38].items,
-	    		headlist8:res.data.data.templatelist[40].items,
-	    		productlist8_top:res.data.data.templatelist[41].items,
-	    		productlist8_bottom:res.data.data.templatelist[42].items,
-	    		headlist9:res.data.data.templatelist[44].items,
-	    		productlist9_top:res.data.data.templatelist[45].items,
-	    		productlist9_bottom:res.data.data.templatelist[46].items,
-	    		headlist10:res.data.data.templatelist[48].items,
-	    		productlist10_top:res.data.data.templatelist[49].items
+	    		headlist8:res.data.data.templatelist[39].items,
+	    		productlist8_top:res.data.data.templatelist[40].items,
+	    		productlist8_bottom:res.data.data.templatelist[41].items,
+	    		headlist9:res.data.data.templatelist[43].items,
+	    		productlist9_top:res.data.data.templatelist[44].items,
+	    		productlist9_bottom:res.data.data.templatelist[45].items,
+	    		headlist10:res.data.data.templatelist[47].items,
+	    		productlist10_top:res.data.data.templatelist[48].items
 	    	})
 	    })
 		
 		axios.get("http://localhost:3000/api/home2").then(res=>{
 			this.setState({
-				productlist10_bottom:res.data.data.templatelist[1].items,
-	    		headlist11:res.data.data.templatelist[2].items,
-	    		productlist11_top:res.data.data.templatelist[3].items,
-	    		productlist11_bottom:res.data.data.templatelist[4].items,
-	    		bannerlist11:res.data.data.templatelist[5].items,
-	    		bannerlist12:res.data.data.templatelist[8].items
+				productlist10_bottom:res.data.data.templatelist[0].items,
+	    		headlist11:res.data.data.templatelist[1].items,
+	    		productlist11_top:res.data.data.templatelist[2].items,
+	    		productlist11_bottom:res.data.data.templatelist[3].items,
+	    		bannerlist11:res.data.data.templatelist[4].items,
+	    		bannerlist12:res.data.data.templatelist[7].items
 	    	})
 		})
 	}
@@ -288,7 +289,10 @@ class Floor3 extends React.Component{
 								)
 							}
 							</div>
-							<div className="head">
+							<div className="head l">
+							<ReactSwipe className="carousel" swipeOptions={{continuous:true,auto:2000,speed:1000}}
+							key={this.state.bannerlist6.length}
+							>
 							{
 							this.state.bannerlist6.map(item=>
 							<NavLink to={item.jumpurl} key={item.itemid} className="l">
@@ -296,7 +300,8 @@ class Floor3 extends React.Component{
 							</NavLink>
 							)
 							}
-					</div>
+							</ReactSwipe>
+							</div>
 					</div>
 				</div>
 
@@ -466,7 +471,7 @@ class Floor3 extends React.Component{
 								)
 							}
 							</div>
-							<div className="head">
+							<div className="bottom">
 							{
 							this.state.bannerlist11.map(item=>
 							<NavLink to={item.jumpurl} key={item.itemid} className="l">
@@ -474,6 +479,8 @@ class Floor3 extends React.Component{
 							</NavLink>
 							)
 							}
+							</div>
+							<div className="head">
 							{
 							this.state.bannerlist12.map(item=>
 							<NavLink to={item.jumpurl} key={item.itemid} className="l">

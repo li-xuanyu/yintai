@@ -46,6 +46,16 @@ class Floor1 extends React.Component{
 											￥<b>{item.extra.productdetail.price}.00</b>
 										</span>
 									</div>
+									{
+										item.extra.productdetail.prmotionlist.length==0?
+										null
+										:
+										<div className="pro-prom">
+										{
+										item.extra.productdetail.prmotionlist[0].plabel
+										}
+										</div>
+									}
 								</div>
 							)
 						}
