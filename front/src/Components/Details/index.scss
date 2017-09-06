@@ -120,5 +120,18 @@ $base:30px; //html fontsize 就设置成这个值
     			font-size:px2rem(14px);
     		}
 		}
+        .product-price{
+            width:100%;
+            .enjoy{
+                height: px2rem(36px);
+                padding-top: px2rem(2px);
+                padding-bottom: px2rem(20px);
+                padding-left: px2rem(15px);
+                background: url(/mobile/img/phone-enjoy.png) 0 2px no-repeat;
+                background-size: px2rem(15px);
+                font-size: px2rem(13px);
+                color: #e5004f;
+            }
+        }
 	}
 }
