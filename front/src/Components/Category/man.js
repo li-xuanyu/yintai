@@ -1,29 +1,29 @@
-//母婴精选
-import "./index.scss";
-
-class Baby extends React.Component{
+import {NavLink} from 'react-router-dom';
+class Manul extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state={
 			brand:[],
 			more:[],
-			recommend:[],			
+			recommend:[]
 
 		}
 	}
 
-	componentDidMount() {
-	    axios.get("http://localhost:3000/api/badys").then(res=>{
+	componentWillReceiveProps(newprop){
+		console.log(newprop.famousId);
+		let url=`http:/\/localhost:3000/api/famous2?id=${newprop.famousId}`;
+	    axios.get(url).then(res=>{
 	    	this.setState({
 	    		brand:res.data.data.brand.brandrecommend,
 	    		more:res.data.data.more.morerecommend,
 	    		recommend:res.data.data.recommend.categoryrecommend
 	    	})
+	    })
+	}
 
-			
-	    });
-
-	    
+	componentDidMount() {
+		
 	}
 
 	render(){
@@ -37,7 +37,7 @@ class Baby extends React.Component{
 				{this.state.recommend.map(item=>
 					<div className="category-item" key={item.categoryid}>
 					<img src={item.imageurl}/>
-					<a>{item.name}</a>
+					<NavLink to="/details">{item.name}</NavLink>
 					</div>
 				)}
 				</div>
@@ -66,10 +66,11 @@ class Baby extends React.Component{
 				)}
 				</div>
 
-
 			</div>	
 		)
 	}
+
+
 }
 
-export default Baby;
+export default Manul;

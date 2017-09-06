@@ -46,14 +46,14 @@ router.get("/advance",function(req,res){
 
 router.get("/famous1",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.43041094412102776&methodName=products.category.getcategory_3.0.0&method=products.category.getcategory&ver=3.0.0",function(data){
+	spider("/Services/Proxy.ashx?r=0.5196856449072678&methodName=products.category.getcategory_3.0.0&method=products.category.getcategory&ver=3.0.0",function(data){
 		res.send(data);
 	})
 })
 
 router.get("/famous2",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.8914744960382175&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=88",function(data){
+	spider("/Services/Proxy.ashx?r=0.8914744960382175&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid="+req.query.id,function(data){
 		res.send(data);
 	})
 })

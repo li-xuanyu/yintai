@@ -3,54 +3,44 @@ import {NavLink} from 'react-router-dom';
 class Mous extends React.Component{
 	constructor(prop){
 		super(prop);
+		this.state={
+			famouslist:[]
+		}
 		
+	}
+
+	componentDidMount() {
+	    axios.get("http://localhost:3000/api/famous1").then(res=>{
+	    	this.setState({
+	    		famouslist:res.data.data.data
+	    	})
+
+	    })
 	}
 
 	render(){
 		return(
 			<div className="famous">
-				<ul className="famousul" >
-					<li><NavLink to="/category/famous" activeClassName="famouslist">
-						时尚名品
-					</NavLink></li>
-					<li><NavLink to="/category/woman" activeClassName="famouslist">
-						潮流女装
-					</NavLink></li>
-					<li><NavLink to="/category/man" activeClassName="famouslist">
-						精品男装
-					</NavLink></li>
-					<li><NavLink to="/category/underwear" activeClassName="famouslist">
-						品质内衣
-					</NavLink></li>
-					<li><NavLink to="/category/cosmetics" activeClassName="famouslist">
-						护肤彩妆
-					</NavLink></li>
-					<li><NavLink to="/category/boot" activeClassName="famouslist">
-						品质鞋靴
-					</NavLink></li>
-					<li><NavLink to="/category/bag" activeClassName="famouslist">
-						时尚箱包
-					</NavLink></li>
-					<li><NavLink to="/category/outdoor" activeClassName="famouslist">
-						运动户外
-					</NavLink></li>
-					<li><NavLink to="/category/jewelry" activeClassName="famouslist">
-						珠宝饰品
-					</NavLink></li>
-					<li><NavLink to="/category/baby" activeClassName="famouslist">
-						母婴精选
-					</NavLink></li>
-					<li><NavLink to="/category/house" activeClassName="famouslist">
-						家居家纺
-					</NavLink></li>
+				<ul className="famousul" onClick={()=>{
+					console.log(this.state.famousId)
+				}}>
+					{this.state.famouslist.map(item=>
+
+					<li key={item.id} onClick={()=>{
+						//切换页面  
+						this.setState({
+							famousId:item.id
+						})
+
+					}}><NavLink to="/category" activeClassName="famouslist">{item.name}</NavLink></li>
+
+					)}
 				</ul>
-			</div>	
+				</div>
 		)
 	}
 
-	handleDiv(){
 
-	}
 }
 
 export default Mous;

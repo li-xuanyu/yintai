@@ -52,7 +52,7 @@ class Clear extends React.Component{
 							<div className="rec-list" key={item.itemSpu}>
 								<img src={item.imageUrl}/>
 								<span>{item.itemName}</span>
-								<p>￥{item.marketPrice}</p>
+								<p>￥{item.marketPrice}.00</p>
 							</div>
 						)
 
