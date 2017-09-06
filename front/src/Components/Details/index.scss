@@ -27,5 +27,108 @@ $base:30px; //html fontsize 就设置成这个值
 
 #details{
 	width:100%;
-	height:100%;
+
+	.yintai-header {
+    	width: 100%;
+        position: fixed;
+        top:0;
+        left:0;
+    	z-index: 510;
+    	background-color: #fff;
+    	height: px2rem(40px);
+    	border-bottom: px2rem(1px) solid #ccc;
+
+		.back-button {
+    		position: absolute;
+    		width: px2rem(18px);
+    		line-height: px2rem(40px);
+    		top: 0;
+    		left: px2rem(10px);
+    		font-weight: 600;
+		}
+
+		.hear-name {
+    		width: px2rem(200px);
+    		text-align: center;
+    		line-height: px2rem(40px);
+    		font-size: px2rem(18px);
+    		font-weight: 500;
+    		margin: px2rem(0px) auto;
+    		height: px2rem(40px);
+    		white-space: nowrap;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+		}
+
+		.xiala {
+    		position: absolute;
+    		right: px2rem(10px);
+    		top: 0;
+    		width: px2rem(22px);
+    		height: px2rem(40px);
+
+    		img {
+    		display: block;
+    		width: px2rem(22px);
+    		line-height: px2rem(40px);
+    		}
+    	}
+
+	}
+
+    #bj-alert{
+        position:fixed;
+        z-index: 15;
+        right: 0;
+        top: px2rem(40px);
+        display: block;
+        width: px2rem(375px);
+        height: px2rem(637px);
+        background-color:rgba(0,0,0,.1);
+
+        .kd-alert {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            background-color: #fff;
+
+            .alert-content{
+                padding:px2rem(5px);
+
+                a {
+                    display: block;
+                    padding: px2rem(5px);
+                    text-align: center;
+                    text-decoration: none;
+                    color: #666;
+                    border-bottom: px2rem(1px) solid #ccc;
+                    line-height: px2rem(20px);
+                    img{
+                        display: inline-block;
+                        width: px2rem(25px);
+                        height: px2rem(20px);
+                        margin: px2rem(5px) px2rem(5px) px2rem(5px) 0;
+                        vertical-align: top;
+                        background-size: 100%;
+                    }
+                    span{
+                        display: inline-block;
+                        width: px2rem(60px);
+                        height: px2rem(20px);
+                        margin: px2rem(7px) 0 px2rem(3px);
+                        line-height: px2rem(20px);
+                        font-size: px2rem(14px);                      
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+
+
+
 }

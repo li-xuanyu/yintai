@@ -58,72 +58,9 @@ router.get("/famous2",function(req,res){
 	})
 })
 
-router.get("/woman",function(req,res){
+router.get("/details",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.32841183970624477&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=150",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/man",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.37799000084364276&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=257",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/underwear",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.5993695889088886&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=245",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/cosmetics",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.7518876161357857&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=151",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/boot",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.16672229695413554&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=2",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/bag",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.42379642052367816&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=5",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/outdoor",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.8057479768984901&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=242",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/jewelry",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.7641221507200813&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=1",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/badys",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.21848800756882913&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=3",function(data){
-		res.send(data);
-	})
-})
-
-router.get("/house",function(req,res){
-	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.7927333240386347&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=4",function(data){
+	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-458-8119%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061007",function(data){
 		res.send(data);
 	})
 })
