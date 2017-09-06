@@ -26,7 +26,7 @@ module.exports = {
                   target:'http://localhost:3000',
                   host: 'http://localhost:8888',
                   changeOrigin:true
-              },
+              }
         }
 
     },

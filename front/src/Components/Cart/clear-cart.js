@@ -9,18 +9,11 @@ class Clear extends React.Component{
 		
 	}
 
-	componentDidMount() {
-	    axios.get("http://localhost:3000/api/clears").then(res=>{
-	    	this.setState({
-	    		val:res.data.val
-	    	})
-	    	console.log(res.data)
-	    })
-	}
-
 	render(){
 		return(
+
 			<div id="clear">
+			
 			<div id="allprod">
 				<div className="fir-sig-redu">
 				<img src="https://r.ytrss.com/mobile/img/broadcast.png" className="l"/>
@@ -46,22 +39,8 @@ class Clear extends React.Component{
 					<span>猜你喜欢</span>
 					</div>
 				</legend>
-				<div className="rec-set">
-					{
-						this.state.val.map(item=>
-							<div className="rec-list" key={item.itemSpu}>
-								<img src={item.imageUrl}/>
-								<span>{item.itemName}</span>
-								<p>￥{item.marketPrice}.00</p>
-							</div>
-						)
-
-					}
-				</div>
 			</div>
 			
-			
-
 			</div>
 		)
 	}

@@ -7,6 +7,7 @@ body,html{
 	width:100%;
 	height:100%;
 	outline:none;
+
 }
 ul,li{
 	list-style:none;
@@ -26,7 +27,6 @@ $base:30px; //html fontsize 就设置成这个值
 }
 #cart{
 	width:100%;
-
 	.cart-header {
     	width: 100%;
         position: relative;
@@ -44,6 +44,12 @@ $base:30px; //html fontsize 就设置成这个值
     		left: px2rem(10px);
     		margin-right: px2rem(20px);
     		color:#333;
+
+            img{
+                margin-top: px2rem(7px);
+                height: px2rem(25px); 
+                width: px2rem(25px);  
+            }
 		}
 
 		.hear-name {
@@ -54,6 +60,8 @@ $base:30px; //html fontsize 就设置成这个值
     		font-weight: 500;
     		margin: px2rem(0px) auto;
     		height: px2rem(40px);
+
+            
 		}
 
 		
@@ -63,6 +71,8 @@ $base:30px; //html fontsize 就设置成这个值
 		position:relative;
         z-index: 14;
         width: 100%;
+        height: px2rem(627px);
+        background:#eee;
 
 		#allprod{
 			float: left;
@@ -108,7 +118,7 @@ $base:30px; //html fontsize 就设置成这个值
     			img{
     				line-height: 1.6rem;
     				display: block;
-    				background-size: px2rem(110px);
+    				width: px2rem(110px);
     				margin: 0 auto;
     				padding-bottom:px2rem(20px);
     			}
