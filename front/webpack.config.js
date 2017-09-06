@@ -21,13 +21,13 @@ module.exports = {
         
         //反向代理
 
-        // proxy:{
-        //    '/Services/*': {
-        //           target: 'http://h5.yintai.com',
-        //           host: 'recommend-prod.yintai.com',
-        //           changeOrigin:true
-        //       }
-        // }
+        proxy:{
+           '/api/*': {
+                  target:'http://localhost:3000',
+                  host: 'http://localhost:8888',
+                  changeOrigin:true
+              },
+        }
 
     },
 

@@ -10,7 +10,7 @@ class Mous extends React.Component{
 	}
 
 	componentDidMount() {
-	    axios.get("http://localhost:3000/api/famous1").then(res=>{
+	    axios.get("/api/famous1").then(res=>{
 	    	this.setState({
 	    		famouslist:res.data.data.data
 	    	})

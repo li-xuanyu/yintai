@@ -12,7 +12,7 @@ class Floor2 extends React.Component{
 	}
 
 	componentDidMount() {
-	    axios.get("http://localhost:3000/api/home1").then(res=>{
+	    axios.get("/api/home1").then(res=>{
 	    	this.setState({
 	    		floorlist2_head:res.data.data.templatelist[5].items,
 	    		floorlist2_content:res.data.data.templatelist[6].items,

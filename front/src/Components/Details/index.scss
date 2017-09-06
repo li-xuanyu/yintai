@@ -6,6 +6,7 @@
 body,html{
 	width:100%;
 	height:100%;
+	background:#fff;
 	outline:none;
 }
 ul,li{
@@ -20,115 +21,117 @@ a{
 .r{
 	float:right;
 }
+img{
+	display:block;
+	width:100%;
+	height:100%
+}
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
 
-#details{
+#detail{
 	width:100%;
-
-	.yintai-header {
-    	width: 100%;
-        position: fixed;
-        top:0;
-        left:0;
-    	z-index: 510;
-    	background-color: #fff;
-    	height: px2rem(40px);
-    	border-bottom: px2rem(1px) solid #ccc;
-
-		.back-button {
-    		position: absolute;
-    		width: px2rem(18px);
-    		line-height: px2rem(40px);
-    		top: 0;
-    		left: px2rem(10px);
-    		font-weight: 600;
-		}
-
-		.hear-name {
-    		width: px2rem(200px);
-    		text-align: center;
-    		line-height: px2rem(40px);
-    		font-size: px2rem(18px);
-    		font-weight: 500;
-    		margin: px2rem(0px) auto;
-    		height: px2rem(40px);
-    		white-space: nowrap;
+	height:100%;
+	margin:px2rem(40px) auto 0;
+	background:#fff;
+	.slider{
+		width:100%;
+		height:px2rem(356px);
+		background:#fff;
+		position: relative;
+    	z-index: 8;
+    	.swipe{
+    		width:100%;
+    		position: relative;
+    		z-index: 1;
+    		margin: 0 auto;
+    		padding: px2rem(10px) 0;
     		overflow: hidden;
-    		text-overflow: ellipsis;
-		}
-
-		.xiala {
-    		position: absolute;
-    		right: px2rem(10px);
-    		top: 0;
-    		width: px2rem(22px);
-    		height: px2rem(40px);
-
-    		img {
-    		display: block;
-    		width: px2rem(22px);
-    		line-height: px2rem(40px);
+    		a{
+    			display:block;
+    			width:100%;
+    			img{
+    				display:block;
+    				margin:0 auto;
+    				width: px2rem(240px);
+    				height: px2rem(320px);
+    				vertical-align: top;
+    			}
     		}
     	}
-
 	}
-
-    #bj-alert{
-        position:fixed;
-        z-index: 15;
-        right: 0;
-        top: px2rem(40px);
-        display: block;
-        width: px2rem(375px);
-        height: px2rem(637px);
-        background-color:rgba(0,0,0,.1);
-
-        .kd-alert {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 1;
-            background-color: #fff;
-
-            .alert-content{
-                padding:px2rem(5px);
-
-                a {
-                    display: block;
-                    padding: px2rem(5px);
-                    text-align: center;
-                    text-decoration: none;
-                    color: #666;
-                    border-bottom: px2rem(1px) solid #ccc;
-                    line-height: px2rem(20px);
-                    img{
-                        display: inline-block;
-                        width: px2rem(25px);
-                        height: px2rem(20px);
-                        margin: px2rem(5px) px2rem(5px) px2rem(5px) 0;
-                        vertical-align: top;
-                        background-size: 100%;
-                    }
-                    span{
-                        display: inline-block;
-                        width: px2rem(60px);
-                        height: px2rem(20px);
-                        margin: px2rem(7px) 0 px2rem(3px);
-                        line-height: px2rem(20px);
-                        font-size: px2rem(14px);                      
-                    }
-                }
-
-                
+	.product-info{
+		width:100%;
+		margin:px2rem(10px) px2rem(10px) auto;
+		height:px2rem(124px);
+		background:#fff;
+		.product-h{
+			height:px2rem(46px);
+			position:relative;
+			#product-name{
+				height: px2rem(45px);
+    			line-height: px2rem(20px);
+    			padding: px2rem(3px) px2rem(10px) px2rem(3px) 0;
+    			margin-right: px2rem(47px);
+    			font-size: px2rem(16px);
+    			color: #333;
+    			overflow: hidden;
+			}
+			span{
+				position: absolute;
+    			top: 0;
+    			right: px2rem(20px);
+    			width: px2rem(35px);
+    			height: px2rem(46px);
+    			text-align: center;
+    			.sc{
+    				display: inline-block;
+    				width: px2rem(35px);
+    				height: px2rem(30px);
+    				margin: px2rem(10px) 0 0 0;
+    				background: url(https://r.ytrss.com/mobile/img/bai-08.png) 0 0 no-repeat;
+    				background-size: 100%;
+    			}
+			}
+		}
+		.product-p{
+			height: px2rem(42px);
+    		padding: px2rem(8px) 0;
+    		.sou{
+    			margin-right: px2rem(11px);
+    			color: #e5004f;
+    			font-size:px2rem(14px);
+    			.price{
+    				font-size: px2rem(24px);
+    				font-weight: 500;
+    			}
+    		}
+    		.shi{
+    			padding-top: px2rem(8px);
+    			text-decoration: line-through;
+    			font-size:px2rem(16px);
+    			color: #999;
+    		}
+    		.sku{
+    			padding-top: px2rem(8px);
+    			color: #999;
+    			font-size:px2rem(14px);
+    		}
+		}
+        .product-price{
+            width:100%;
+            .enjoy{
+                height: px2rem(36px);
+                padding-top: px2rem(2px);
+                padding-bottom: px2rem(20px);
+                padding-left: px2rem(15px);
+                background: url(/mobile/img/phone-enjoy.png) 0 2px no-repeat;
+                background-size: px2rem(15px);
+                font-size: px2rem(13px);
+                color: #e5004f;
             }
         }
-    }
-
-
-
-
+	}
 }

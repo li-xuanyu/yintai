@@ -11,12 +11,12 @@ class Passport extends React.Component{
 			<div id="passport">
 				<div className="login-p l">
 					<div className="text">
-						<img src="https://h5.yintai.com/m/images/ueser-img-75da284743.png"/>
-						<input type="text" placeholder="请输入银泰护照号(手机号)" id="name"/>
+						<img src="https://h5.yintai.com/m/images/ueser-img-75da284743.png" className="l"/>
+						<input type="text" placeholder="请输入银泰护照号(手机号)" id="name" className="l"/>
 					</div>
 					<div className="password">
-						<img src="https://h5.yintai.com/m/images/pass-img-c8ba68915f.png"/>
-						<input type="password" placeholder="请输入密码" id="password"/>
+						<img src="https://h5.yintai.com/m/images/pass-img-c8ba68915f.png" className="l"/>
+						<input type="password" placeholder="请输入密码" id="password" className="l"/>
 					</div>
 					<div id="login">登 录</div>
 					<div className="login-reg">

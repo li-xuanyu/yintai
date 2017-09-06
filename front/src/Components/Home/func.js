@@ -8,7 +8,7 @@ class Funcarea extends React.Component{
 	}
 
 	componentDidMount() {
-	    axios.get("http://localhost:3000/api/home1").then(res=>{
+	    axios.get("/api/home1").then(res=>{
 	    	this.setState({
 	    		homelist2:res.data.data.templatelist[0].items
 	    	})

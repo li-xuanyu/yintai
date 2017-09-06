@@ -35,7 +35,7 @@ class Register extends React.Component{
 				</div>
 				<p className="explain">请为护照设置密码（6到12位，英文+数字）</p>
 				<p className="explain">注册关联银泰护照后您可使用护照直接登录银泰网。银泰护照即银泰百货会员，注册后，在银泰百货商场可享受会员待遇，并可共享积分等。</p>
-				<button id="submit" type="button" disabled>创建银泰护照</button>
+				<button id="submit" type="button" onClick={this.handleClick1.bind(this)}>创建银泰护照</button>
 			</div>
 			</div>	
 		)
@@ -44,6 +44,9 @@ class Register extends React.Component{
 		this.setState({
 			isShow:!this.state.isShow
 		})
+	}
+	handleClick1(){
+		console.log(111)
 	}
 }
 
