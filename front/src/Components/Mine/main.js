@@ -9,13 +9,13 @@ class Main extends React.Component{
 			<div className="main">
 				<ul className="tablist l">
 					<li className="item l">
-					<NavLink to="/mine/passport" className="one">
+					<NavLink to="/mine/passport" activeClassName="one">
 					银泰护照
 					</NavLink>
 					</li>
 
 					<li className="item l">
-					<NavLink to="/mine/accont">
+					<NavLink to="/mine/accont" activeClassName="one">
 					银泰网账号
 					</NavLink>
 					</li>

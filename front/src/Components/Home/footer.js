@@ -4,6 +4,20 @@ class Footer extends React.Component{
 		super(prop);
 	}
 
+	componentDidMount() {
+	    window.onscroll=()=>{
+	    	var gotop=document.querySelector(".gotop");
+	    	document.body.scrollTop>1000?
+	    	gotop.style.display="block"
+	    	:
+	    	gotop.style.display="none"
+	    }
+	}
+
+	componentWillUpdate() {
+	    window.onscroll=null;
+	}
+
 	render(){
 		return (
 			<footer className="ft l">
@@ -43,11 +57,15 @@ class Footer extends React.Component{
 				{
 
 				}
-				<div className="gotop">
+				<div className="gotop" style={{display:"none"}} onClick={this.handleClick.bind(this)}>
 				<a href='javascript:;'></a>
 				</div>
 			</footer>
 		)
+	}
+
+	handleClick(){
+		document.body.scrollTop=0;
 	}
 }
 

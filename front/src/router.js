@@ -53,6 +53,7 @@ const router=(
 					<Route path="/category" component={Category}/>
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
+					<Route path="/register" component={Register}/>
 					<Route path="/product" render={()=>
 						<Product>
 						<Switch>
@@ -62,7 +63,7 @@ const router=(
 							<Route path="/product/discount" component={Default}/>
 							<Route path="/product/choose" component={Default}/>
 							<Redirect from="/product" to="/product/default"/>
-							</Switch>
+						</Switch>
 						</Product>
 					}/>
 						<Route path="/mine" render={()=>

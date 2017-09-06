@@ -51,7 +51,7 @@ class Category extends React.Component{
 							famousId:item.id
 						})
 						// console.log(item.id)
-					}}>{item.name}</li>
+					}} className={this.state.famousId==item.id?"famouslist":""}>{item.name}</li>
 
 					)}
 				</ul>
