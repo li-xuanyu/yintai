@@ -2,7 +2,9 @@
 import "./index.scss";
 import Header from "./header";
 import Nav from "./nav";
-import Newest from "../Newest"
+import Xiala from "./xiala";
+import Liebiao from "./liebiao"
+
 import{
 	BrowserRouter as Router,
 	Route,
@@ -13,20 +15,31 @@ import{
 class Limitbuy extends React.Component{
 	constructor(prop){
 		super(prop);
+		this.state={
+			limitId:5
+			
+		}
 	}
 
 	render(){
 		return(
 			<div id="limitbuy">
-				<Header></Header>
-				<Nav></Nav>
+				<Header isHide={this}></Header>
+				<Xiala></Xiala>
+				<Nav event={this.handleClick.bind(this)}></Nav>
+				
 				<section>
-					{this.props.children}
+				<Liebiao isId={this.state.limitId} event={this}></Liebiao>
 				</section>
-
 			</div>	
 			
 		)
+	}
+
+	handleClick(id){
+		this.setState({
+			limitId:id
+		})
 	}
 }
 

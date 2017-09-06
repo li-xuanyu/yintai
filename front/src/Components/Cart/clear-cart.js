@@ -3,9 +3,6 @@ import {NavLink} from "react-router-dom"
 class Clear extends React.Component{
 	constructor(prop){
 		super(prop);
-		this.state={
-			val:[]
-		}
 		
 	}
 

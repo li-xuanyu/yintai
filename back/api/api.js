@@ -28,15 +28,47 @@ router.get("/home2",function(req,res){
 	})
 })
 
+router.get("/recommend",function(req,res){
+	spider("/Services/Proxy.ashx?r=0.30687986934858347&type="+req.query.type+"&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
+
 router.get("/default",function(req,res){
-	spider("/Services/Proxy.ashx?r=0.15181752262363646&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
+	spider("/Services/Proxy.ashx?r=0.15181752262363646&order_type=0&page_index="+req.query.page_index+"&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
 	res.send(data);	
 
 	})
 })
 
+router.get("/sales",function(req,res){
+	spider("/Services/Proxy.ashx?r=0.8892220504583117&type=3&pageindex=1&pagesize=30&methodName=products.getrecommendedproductlist_1.2.0&method=products.getrecommendedproductlist&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
+router.get("/limit",function(req,res){
+	spider("/Services/Proxy.ashx?r=0.5063311052565642&methodName=products.getbargaintaglist_1.0.0&method=products.getbargaintaglist&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
+router.get("/products",function(req,res){
+	spider("/Services/Proxy.ashx?r=0.6802822056747244&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid="+req.query.bargainid+"&method=products.getlimitlist&ver=2.1",function(data){
+	res.send(data);	
+	})
+})
+
 router.get("/address",function(req,res){
 	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-458-8119%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/discount",function(req,res){
+	spider("/Services/Proxy.ashx?r=0.7757415012113089&order_type=7&page_index="+req.query.page_index+"&displaycount=30&query_string=&keyword=&bargainid="+req.query.bargainid+"&method=products.getlimitlist&ver=2.1",function(data){
 	res.send(data);	
 
 	})

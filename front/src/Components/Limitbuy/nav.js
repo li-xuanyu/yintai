@@ -9,18 +9,31 @@ import{
 class Nav extends React.Component{
 	constructor(prop){
 		super(prop);
+		this.state={
+			limit:[]
+		}
 	}
 
+	componentDidMount() {
+	   axios.get("/api/limit").then(res=>{
+	   		this.setState({
+	   			limit:res.data.data
+	   		})
+	   		console.log(this.state.limit)
+	   })
+	}
 	render(){
 		return(
 			<nav>
-				<div>
-					<span><NavLink to="/LimitBuy/recommend" activeClassName="focus">推荐</NavLink></span>
-					<span><NavLink to="/LimitBuy/latest" activeClassName="focus">最新</NavLink></span>
-					<span><NavLink to="/LimitBuy/tmbt" activeClassName="focus">特卖爆推</NavLink></span>
-					<span><NavLink to="/LimitBuy/countdown" activeClassName="focus">倒计时</NavLink></span>
-					<span className="herald"><NavLink to="/LimitBuy/herald" activeClassName="focus">预告</NavLink></span>
-				</div>
+				<ul>
+					{
+						this.state.limit.map(item=>
+							<li key={item.bargaintagtype} onClick={()=>{
+								this.props.event(item.bargaintagtype)
+							}}>{item.bargaintagname}</li>
+						)
+					}
+				</ul>
 			</nav>	
 		)
 	}

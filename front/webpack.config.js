@@ -19,8 +19,7 @@ module.exports = {
         port: '8888',
         historyApiFallback: true,
         
-        //反向代理
-
+        
         proxy:{
            '/api/*': {
                   target:'http://localhost:3000',
