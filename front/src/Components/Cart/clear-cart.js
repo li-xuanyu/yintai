@@ -9,14 +9,7 @@ class Clear extends React.Component{
 		
 	}
 
-	componentDidMount() {
-	    axios.get("http://localhost:3000/api/clears").then(res=>{
-	    	this.setState({
-	    		val:res.data.val
-	    	})
-	    	console.log(res.data)
-	    })
-	}
+	
 
 	render(){
 		return(

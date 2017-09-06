@@ -172,7 +172,8 @@ router.get("/products",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	spider("/Services/Proxy.ashx?r=0.6802822056747244&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid="+req.query.bargainid+"&method=products.getlimitlist&ver=2.1",function(data){
 
-
+	})
+})
 router.get("/address",function(req,res){
 	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-458-8119%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307",function(data){
 	res.send(data);	

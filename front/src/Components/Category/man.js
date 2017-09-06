@@ -12,7 +12,7 @@ class Manul extends React.Component{
 
 	componentWillReceiveProps(newprop){
 		console.log(newprop.famousId);
-		let url=`http:/\//api/famous2?id=${newprop.famousId}`;
+		let url=`/api/famous2?id=${newprop.famousId}`;
 	    axios.get(url).then(res=>{
 	    	this.setState({
 	    		brand:res.data.data.brand.brandrecommend,
