@@ -11,7 +11,7 @@ router.get("/home1",function(req,res){
 })
 router.get("/recommend",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.30687986934858347&type=5&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
+	spider("/Services/Proxy.ashx?r=0.30687986934858347&type="+req.query.type+"&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1",function(data){
 	res.send(data);	
 	})
 })
@@ -138,14 +138,62 @@ router.get("/home2",function(req,res){
 
 router.get("/default",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	spider("/Services/Proxy.ashx?r=0.15181752262363646&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
+	spider("/Services/Proxy.ashx?r=0.15181752262363646&order_type=0&page_index="+req.query.page_index+"&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
 	res.send(data);	
 
 	})
 })
 router.get("/clears",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
-	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
+	spider("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/sales",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.8892220504583117&type=3&pageindex=1&pagesize=30&methodName=products.getrecommendedproductlist_1.2.0&method=products.getrecommendedproductlist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/price",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.7443964619665411&order_type=3&page_index=1&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/discount",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.7757415012113089&order_type=7&page_index="+req.query.page_index+"&displaycount=30&query_string=&keyword=&bargainid="+req.query.bargainid+"&method=products.getlimitlist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/choose",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.7757415012113089&order_type=7&page_index=1&displaycount=30&query_string=&keyword=&bargainid=26686&method=products.getlimitlist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/limit",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.5063311052565642&methodName=products.getbargaintaglist_1.0.0&method=products.getbargaintaglist&ver=2.1",function(data){
+	res.send(data);	
+
+	})
+})
+
+router.get("/products",function(req,res){
+	res.header("Access-Control-Allow-Origin","*");
+	spider("/Services/Proxy.ashx?r=0.6802822056747244&order_type=0&page_index=1&displaycount=30&query_string=&keyword=&bargainid="+req.query.bargainid+"&method=products.getlimitlist&ver=2.1",function(data){
 	res.send(data);	
 
 	})

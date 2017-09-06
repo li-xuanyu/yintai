@@ -19,12 +19,12 @@ module.exports = {
         port: '8888',
         historyApiFallback: true,
         
-        //反向代理
+        // 反向代理
 
         // proxy:{
-        //    '/facade/json/*': {
-        //           target: 'https://recommend-prod.yintai.com',
-        //           host: 'recommend-prod.yintai.com',
+        //    '/Services/*': {
+        //           target: 'https://m.yintai.com/',
+        //           host: 'm.yintai.com',
         //           changeOrigin:true
         //       }
         // }

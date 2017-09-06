@@ -26,6 +26,7 @@ $base:30px; //html fontsize 就设置成这个值
 }
 
 #limitbuy{
+	width:100%;
 	header {
 		height: px2rem(50px);
 		text-align: center;
@@ -34,10 +35,25 @@ $base:30px; //html fontsize 就设置成这个值
 		border-bottom:px2rem(1px) solid #ccc;
 	}
 	nav{
-		
+		width: 100%;
+
 		border-bottom:px2rem(1px) solid #ccc;
 		.herald{
 			border-right:none;
+		}
+
+		ul{
+			width: 100%;
+			height: px2rem(36px);
+
+			li{
+				float: left;
+				width: 20%;
+				line-height: px2rem(36px);
+				text-align: center;
+				font-size: px2rem(16px);
+				color: #666;
+			}
 		}
 		span{
 			display: inline-block;
@@ -48,15 +64,55 @@ $base:30px; //html fontsize 就设置成这个值
 			padding:px2rem(2px) px2rem(16px);
 			
 			a{
-				font-size: px2rem(16px);
-				color: #666;
+				
+				display: inline-block;
 			}
 			.focus{
 				
 				color: yellow;
+				border-bottom:px2rem(2px) solid red;
 			}
 		}
 	}
+
+	#sale{
+	width: 100%;
+	
+	ul{
+		padding:px2rem(10px);
+		li{
+			overflow: hidden;
+			padding-bottom:px2rem(10px);
+			padding-top:px2rem(10px);
+			border-bottom:px2rem(1px) dashed #ccc;
+			img{
+				width: px2rem(90px);
+				height:px2rem(120px);
+				border:px2rem(1px) solid #ccc;
+			}
+			.intro{
+				float: left;
+				font-size: px2rem(18px);
+				margin-left: px2rem(10px);
+				p{
+					height: px2rem(30px);
+					line-height:px2rem(30px);
+				}
+				.original_cost{
+					text-decoration: line-through;
+				}
+				.special{
+					background:hotpink;
+					border-radius:px2rem(10px);
+					width: px2rem(50px);
+					text-align: center;
+
+				}
+			}
+		}
+	}
+}
+
 }
 #nowShow {
 	ul{
@@ -104,41 +160,7 @@ $base:30px; //html fontsize 就设置成这个值
 	}
 }
 
-#sale{
-	ul{
-		padding:px2rem(10px);
-		li{
-			overflow: hidden;
-			padding-bottom:px2rem(10px);
-			padding-top:px2rem(10px);
-			border-bottom:px2rem(1px) dashed #ccc;
-			img{
-				width: px2rem(90px);
-				height:px2rem(120px);
-				border:px2rem(1px) solid #ccc;
-			}
-			.intro{
-				float: left;
-				font-size: px2rem(18px);
-				margin-left: px2rem(10px);
-				p{
-					height: px2rem(30px);
-					line-height:px2rem(30px);
-				}
-				.original_cost{
-					text-decoration: line-through;
-				}
-				.special{
-					background:hotpink;
-					border-radius:px2rem(10px);
-					width: px2rem(50px);
-					text-align: center;
 
-				}
-			}
-		}
-	}
-}
 
 #countdown{
 	ul{
@@ -229,6 +251,23 @@ $base:30px; //html fontsize 就设置成这个值
 				background: pink;
 				border-radius:0 px2rem(50px) px2rem(50px) 0;
 			
+			}
+		}
+	}
+}
+
+#xiala{
+	ul{
+		position: absolute;
+		top: px2rem(50px);
+		right: 0;
+		width: px2rem(120px);
+		z-index: 100;
+		background:rgba(205,205,205,8);
+		li{
+			a{
+				font-size: px2rem(16px);
+				color: white;
 			}
 		}
 	}
