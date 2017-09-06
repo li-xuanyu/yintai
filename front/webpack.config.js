@@ -22,8 +22,8 @@ module.exports = {
         //反向代理
 
         // proxy:{
-        //    '/facade/json/*': {
-        //           target: 'https://h5.yintai.com',
+        //    '/Services/*': {
+        //           target: 'http://h5.yintai.com',
         //           host: 'recommend-prod.yintai.com',
         //           changeOrigin:true
         //       }
@@ -93,3 +93,4 @@ module.exports = {
         new ExtractTextPlugin({ filename: 'css/[name].css', disable: false, allChunks: true })
     ]    
 }
+
