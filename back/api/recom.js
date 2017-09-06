@@ -9,7 +9,7 @@ function recom(path,callback){
         method:'get',
 
         headers:{
-            authorization:'Bearer 93153732b49f74cff28bfe91a51e3bc663ff89bd'
+            Authorization:'Bearer 93153732b49f74cff28bfe91a51e3bc663ff89bd'
         }
     };
 
@@ -20,7 +20,7 @@ function recom(path,callback){
             alldata+=chunk;
         })
 
-        res.on("end",function(){s
+        res.on("end",function(){
             callback(alldata);
         })
     })

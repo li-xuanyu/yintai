@@ -31,7 +31,6 @@ import Choose from "./Components/Choose";
 import Product from "./Components/Product";
 
 
-
 //用router包裹我们的根组件
 const router=(
 		<Router>
