@@ -10,7 +10,7 @@ class Swipe1 extends React.Component{
 
 	componentDidMount() {
 		//ajax请求
-		axios.get("http://localhost:3000/api/home1").then(res=>{
+		axios.get("/api/home1").then(res=>{
 			this.setState({
 				homelist1:res.data.data.bannerlist
 			})

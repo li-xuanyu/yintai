@@ -6,6 +6,7 @@
 body,html{
 	width:100%;
 	height:100%;
+	background:#fff;
 	outline:none;
 }
 ul,li{
@@ -20,12 +21,104 @@ a{
 .r{
 	float:right;
 }
+img{
+	display:block;
+	width:100%;
+	height:100%
+}
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
 
-#details{
+#detail{
 	width:100%;
 	height:100%;
+	margin:px2rem(40px) auto 0;
+	background:#fff;
+	.slider{
+		width:100%;
+		height:px2rem(356px);
+		background:#fff;
+		position: relative;
+    	z-index: 8;
+    	.swipe{
+    		width:100%;
+    		position: relative;
+    		z-index: 1;
+    		margin: 0 auto;
+    		padding: px2rem(10px) 0;
+    		overflow: hidden;
+    		a{
+    			display:block;
+    			width:100%;
+    			img{
+    				display:block;
+    				margin:0 auto;
+    				width: px2rem(240px);
+    				height: px2rem(320px);
+    				vertical-align: top;
+    			}
+    		}
+    	}
+	}
+	.product-info{
+		width:100%;
+		margin:px2rem(10px) px2rem(10px) auto;
+		height:px2rem(124px);
+		background:#fff;
+		.product-h{
+			height:px2rem(46px);
+			position:relative;
+			#product-name{
+				height: px2rem(45px);
+    			line-height: px2rem(20px);
+    			padding: px2rem(3px) px2rem(10px) px2rem(3px) 0;
+    			margin-right: px2rem(47px);
+    			font-size: px2rem(16px);
+    			color: #333;
+    			overflow: hidden;
+			}
+			span{
+				position: absolute;
+    			top: 0;
+    			right: px2rem(20px);
+    			width: px2rem(35px);
+    			height: px2rem(46px);
+    			text-align: center;
+    			.sc{
+    				display: inline-block;
+    				width: px2rem(35px);
+    				height: px2rem(30px);
+    				margin: px2rem(10px) 0 0 0;
+    				background: url(https://r.ytrss.com/mobile/img/bai-08.png) 0 0 no-repeat;
+    				background-size: 100%;
+    			}
+			}
+		}
+		.product-p{
+			height: px2rem(42px);
+    		padding: px2rem(8px) 0;
+    		.sou{
+    			margin-right: px2rem(11px);
+    			color: #e5004f;
+    			font-size:px2rem(14px);
+    			.price{
+    				font-size: px2rem(24px);
+    				font-weight: 500;
+    			}
+    		}
+    		.shi{
+    			padding-top: px2rem(8px);
+    			text-decoration: line-through;
+    			font-size:px2rem(16px);
+    			color: #999;
+    		}
+    		.sku{
+    			padding-top: px2rem(8px);
+    			color: #999;
+    			font-size:px2rem(14px);
+    		}
+		}
+	}
 }

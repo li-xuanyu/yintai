@@ -1,25 +1,33 @@
 //详情
+import {NavLink} from "react-router-dom";
+import Alert from "../Category/alert-content.js";
+import Hear from "../Category/hear-name.js";
+import Main from "./main.js";
+import "../Category/index.scss";
 import "./index.scss";
 
 class Dateils extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state={
-			address:[]
+			isShow:false,
+			isHide:false
 		}
-	}
-	componentDidMount() {
-	    // axios.get("http://localhost:3000/api/address").then(res=>{
-	    // 	console.log(res.data)
-	    // })
 	}
 	render(){
 		return(
-			<div id="details">
-				Dateils
-				{this.props.children}
+			<div id="category">
+			<Hear event={this.handleClick.bind(this)}></Hear>
+			<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
+			<Main></Main>
 			</div>	
 		)
+	}
+
+	handleClick(){
+		this.setState({
+			isShow:!this.state.isShow
+		})
 	}
 }
 

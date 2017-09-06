@@ -17,7 +17,7 @@ class Newest extends React.Component{
 	}
 componentDidMount() {
 	//ajax请求
-	axios.get("http://localhost:3000/api/newest").then(res=>{
+	axios.get("/api/newest").then(res=>{
 		this.setState({
 			Newestlist:res.data.data.activityinfo[0].activitylist
 		})

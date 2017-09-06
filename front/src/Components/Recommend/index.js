@@ -15,7 +15,7 @@ class Recommend extends React.Component{
 	}
 componentDidMount() {
 	//ajax请求
-	axios.get("http://localhost:3000/api/recommend").then(res=>{
+	axios.get("/api/recommend").then(res=>{
 		this.setState({
 			recommendlist:res.data.data.activityinfo[0].activitylist
 		})

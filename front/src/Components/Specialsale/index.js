@@ -10,7 +10,7 @@ class Specialsale extends React.Component{
 	}
 componentDidMount() {
 	//ajax
-	axios.get("http://localhost:3000/api/specialsale").then(res=>{
+	axios.get("/api/specialsale").then(res=>{
 		this.setState({
 			specialsale:res.data.data.productlist
 		})

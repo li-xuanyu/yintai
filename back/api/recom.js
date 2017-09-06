@@ -20,7 +20,7 @@ function recom(path,callback){
             alldata+=chunk;
         })
 
-        res.on("end",function(){s
+        res.on("end",function(){
             callback(alldata);
         })
     })

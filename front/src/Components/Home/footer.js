@@ -38,8 +38,8 @@ class Footer extends React.Component{
 					</div>
 					<div className="login l">
 						<div className="l left">
-							<NavLink to="" className="bor">登录</NavLink>
-							<NavLink to="">注册</NavLink>		
+							<NavLink to="/mine" className="bor">登录</NavLink>
+							<NavLink to="/register">注册</NavLink>		
 						</div>
 						<div className="r right">
 							<NavLink to="">客户端下载</NavLink>
