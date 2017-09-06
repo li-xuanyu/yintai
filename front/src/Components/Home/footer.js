@@ -54,18 +54,19 @@ class Footer extends React.Component{
 					</p>
 					<p>浙ICP备10200233号</p>
 				</div>
-				{
+				<div className="gotop" style={{display:"none"}} onClick={()=>{
+					var timer = setInterval(function(){
+						if (document.body.scrollTop<=0) {
+							clearInterval(timer)
+						};
+						document.body.scrollTop-=1000
+					}, 100)
 
-				}
-				<div className="gotop" style={{display:"none"}} onClick={this.handleClick.bind(this)}>
+				}}>
 				<a href='javascript:;'></a>
 				</div>
 			</footer>
 		)
-	}
-
-	handleClick(){
-		document.body.scrollTop=0;
 	}
 }
 
