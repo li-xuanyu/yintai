@@ -26,6 +26,10 @@ img{
 	width:100%;
 	height:100%
 }
+em{
+    font-style:normal;
+    font-weight:500;
+}
 $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
@@ -120,18 +124,476 @@ $base:30px; //html fontsize 就设置成这个值
     			font-size:px2rem(14px);
     		}
 		}
-        .product-price{
+        .phone-price{
             width:100%;
             .enjoy{
                 height: px2rem(36px);
                 padding-top: px2rem(2px);
                 padding-bottom: px2rem(20px);
                 padding-left: px2rem(15px);
-                background: url(/mobile/img/phone-enjoy.png) 0 2px no-repeat;
+                background: url(https://r.ytrss.com/mobile/img/phone-enjoy.png) 0 2px no-repeat;
                 background-size: px2rem(15px);
                 font-size: px2rem(13px);
                 color: #e5004f;
+                .phone-desc{
+                    font-weight:bold;
+                    font-size: px2rem(13px);
+                    color: #e5004f;
+                }
+                .phone-enjoy{
+                    margin-left: px2rem(5px);
+                    font-size: px2rem(13px);
+                    color: #e5004f;
+                }
             }
         }
-	}
+    }
+    .product-policy{
+            width:100%;
+            display: block;
+            transform-origin: 0px 0px 0px;
+            opacity: 1;
+            transform: scale(1, 1);
+            padding-top: px2rem(10px);
+            border-top: px2rem(1px) solid #d5d5d5;
+            .sale{
+                display: block;
+                margin: 0 px2rem(10px);
+                padding: 0 px2rem(10px) px2rem(10px) 0;
+                line-height: px2rem(24px);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                background: url(https://r.ytrss.com/mobile/img/bai-12.png) right 5px no-repeat;
+                background-size: px2rem(8px) px2rem(15px);
+                color: #666;
+                font-size:px2rem(16px);
+                span{
+                    display: inline-block;
+                    padding: 0 px2rem(8px);
+                    border-radius: px2rem(3px);
+                    min-width: px2rem(32px);
+                    text-align: center;
+                    background-color: #FF3C7E;
+                    color: #fff;
+                    margin-right: px2rem(5px);
+                    vertical-align: top;
+                }
+            }  
+    }
+    .product-tui{
+        width:100%;
+        padding: 0 px2rem(10px);
+        background:#f1f1f1;
+        border-bottom: px2rem(10px) solid #ececec;
+        color: #999;
+        div{
+            display: none;
+            padding-bottom: px2rem(10px);
+        }
+    }
+    .product-check{
+        width:100%;
+        padding: 0 px2rem(10px);
+        height: px2rem(40px);
+        line-height: px2rem(40px);
+        font-size:px2rem(14px);
+        .check-tit{
+            color:#666;
+        }
+        .check-txt{
+            margin-right: px2rem(10px);
+        }
+        .check-num{
+            strong{
+                font-weight:500;
+            }
+        }
+    }
+    .product-move{
+        width:100%;
+        height:px2rem(240px);
+        .concise{
+            margin: 0 px2rem(10px);
+            position: relative;
+            height:px2rem(164px);
+            border-top: px2rem(1px) dashed #dbdbdb;
+            .color{
+                height:px2rem(82px);
+                .word{
+                    width:100%;
+                    position: relative;
+                    padding: px2rem(10px) 0;
+                    color: #666;
+                    font-size:px2rem(14px);
+                }
+                .prop{
+                    border-bottom: px2rem(1px) dashed #dbdbdb;
+                    padding: 0 0 px2rem(6px) px2rem(15px);
+                    .curr{
+                        display: inline-block;
+                        padding: px2rem(5px) px2rem(7px);
+                        border: px2rem(1px) solid #666;
+                        border-radius: px2rem(3px);
+                        margin: 0 px2rem(5px) px2rem(5px) 0;
+                        min-width: px2rem(30px);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: center;
+                        vertical-align: middle;
+                        border: px2rem(1px) solid #e5004f;
+                        color: #ff6d9d;
+                        font-size:px2rem(14px);
+                    }
+                }
+            }
+            .prodsize{
+                width:100%;
+                height:px2rem(82px);
+                .word{
+                    position: relative;
+                    padding: px2rem(10px) 0;
+                    color: #666;
+                    font-size:px2rem(14px);
+                    a{
+                        padding-left: 20px;
+                        background: url(https://r.ytrss.com/mobile/img/size-explain.png) 0 0 no-repeat;
+                        background-size: 16px;
+                        color: #666;
+                        font-size:px2rem(14px);
+                    }
+                }
+                .size{
+                        border-bottom: px2rem(1px) dashed #dbdbdb;
+                        padding: 0 0 px2rem(6px) px2rem(15px);
+                        .normal{
+                            display: inline-block;
+                            padding: px2rem(5px) px2rem(7px);
+                            border: px2rem(1px) solid #666;
+                            border-radius: px2rem(3px);
+                            margin: 0 px2rem(5px) px2rem(5px) 0;
+                            min-width: px2rem(30px);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: center;
+                            vertical-align: middle;
+                            background-color: #fff;
+                            color: #666;
+                            font-size:px2rem(14px);
+                        }
+                        .forbid{
+                            border: 1px solid #b5b5b5;
+                            background-color: #eee;
+                            color: #999;
+                        }
+                }
+            }
+        }
+        .count{
+            width:100%;
+            padding: 0 px2rem(10px) px2rem(10px);
+            color: #666;
+            height:px2rem(65px);
+            .wenzi{
+                padding: px2rem(8px) 0;
+                color: #666;
+                font-size:px2rem(14px);
+            }
+            .dise{
+                padding: 0 0 0 px2rem(15px);
+                height: px2rem(30px);
+                span{
+                    float: left;
+                    width: px2rem(30px);
+                    height: px2rem(30px);
+                    line-height: px2rem(30px);
+                    text-decoration: none;
+                    font-weight: 500;
+                    border: 0 none;
+                    vertical-align: middle;
+                }
+                .jian{
+                    background: #efefef url(https://r.ytrss.com/mobile/img/bai-07.png) 0 0 no-repeat;
+                    background-size: 100%;
+                }
+                #sub{
+                    background-position: 0 px2rem(-90px);
+                }
+                #val{
+                    text-align: center;
+                    color: #666;
+                    font-size: px2rem(18px);
+                    background-color: #fff;
+                }
+                .jia{
+                    background: #efefef url(https://r.ytrss.com/mobile/img/bai-07.png) 0 0 no-repeat;
+                    background-size: 100%;
+                }
+                #add{
+                    background-position: 0 px2rem(-60px);
+                }
+                #tips{
+                    margin-left: px2rem(10px);
+                    display: inline-block;
+                    height: px2rem(30px);
+                    line-height: px2rem(30px);
+                    color: #e5004f;
+                    font-size:px2rem(14px);
+                }
+            }
+        }
+    }
+    .product-brand{
+        width:100%;
+        height: px2rem(60px);
+        padding: 0 px2rem(10px);
+        border-top: px2rem(10px) solid #f1f1f1;
+        border-bottom: px2rem(10px) solid #f1f1f1;
+        a{
+            display: block;
+            height: px2rem(40px);
+            line-height: px2rem(40px);
+            padding-right: px2rem(15px);
+            background: url(https://r.ytrss.com/mobile/img/bai-12.png) right px2rem(15px) no-repeat;
+            background-size: px2rem(8px) px2rem(15px);
+            color: #666;
+            span{
+                font-size:px2rem(14px);
+                strong{
+                    font-weight:400;
+                    font-size:px2rem(14px);
+                }
+            }
+            img{
+                    width: px2rem(45px);
+                    margin-top: px2rem(5px);
+            }
+        }
+    }
+    .product-recommend{
+        width:100%;
+        padding: px2rem(15px) 0;
+        background-color: #f1f1f1;
+        .title{
+                position: relative;
+                height: px2rem(38px);
+                line-height: px2rem(31px);
+                text-align: center;
+                i{
+                    position: absolute;
+                    left: 15%;
+                    top: px2rem(15px);
+                    z-index: 1;
+                    width: 70%;
+                    height: px2rem(1px);
+                    background-color: #b4b4b4;
+                }
+                span{
+                    position: relative;
+                    z-index: 2;
+                    padding: 0 px2rem(10px);
+                    margin: 0 auto;
+                    font-size: px2rem(18px);
+                    font-weight: 500;
+                    background-color: #f1f1f1;
+                    color: #666;
+                }
+        }
+        .main{
+            width:100%;
+            .pm-slider{
+                position: relative;
+                z-index: 1;
+                margin: 0 auto;
+                overflow: hidden;
+                .pm-list{
+                    width:100%;
+                }
+            }
+        }
+    }
+    .product-more{
+        width:100%;
+        .more-title{
+            width:100%;
+            height: px2rem(45px);
+            text-align: center;
+            border-bottom: px2rem(5px) solid #f1f1f1;
+            color: #666;
+            background:#fff;
+            span{
+                display:block;
+                line-height: px2rem(40px);
+                text-align: center;
+                font-weight: 500;
+                font-size:px2rem(14px);
+            }
+        }
+    }
+    #main{
+        width:100%;
+        padding:0 px2rem(5px);
+        background:#fff;
+        .detail{
+            width:100%;
+            h2{
+                background: url(https://r.ytrss.com/rs/img/ec/v3/p-long.gif) 0 px2rem(3px) no-repeat;
+                height: px2rem(24px);
+                line-height: px2rem(24px);
+                font-size: px2rem(14px);
+                color: #000;
+                font-weight: bolder;
+                padding-left: px2rem(3px);
+                span{
+                    padding-left:px2rem(6px);
+                    font-family: Aparajita,"\5fae\8f6f\96c5\9ed1",Verdana,simsun,Sans-Serif;
+                    color: #c9c9c9;
+                }
+            }
+            .imgs{
+                width:100%;
+
+            }
+            .yp-price{
+                width:100%;
+                p{
+                    font-size:px2rem(8px);
+                    font-weight:100;
+                    line-height:px2rem(10px);
+                    display: block;
+                    -webkit-margin-before: 1em;
+                    -webkit-margin-after: 1em;
+                    -webkit-margin-start: 0px;
+                    -webkit-margin-end: 0px;
+                }
+            }
+            .yp-brand{
+                width:100%;
+                .info{
+                    width:90%;
+                    margin: 0 auto;
+                    padding-bottom: px2rem(50px);
+                    .info-img{
+                        height: px2rem(75px);
+                        margin: px2rem(10px) auto px2rem(40px);
+                        width: px2rem(120px);
+                        a{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    .info-txt{
+                        p{
+                            display: block;
+                            -webkit-margin-before: 1em;
+                            -webkit-margin-after: 1em;
+                            -webkit-margin-start: 0px;
+                            -webkit-margin-end: 0px;
+                        }
+                        .name{
+                            font-size: px2rem(20px);
+                            height: px2rem(24px);
+                            line-height: px2rem(24px);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            width: px2rem(170px);   
+                        }
+                        .fenge{
+                            border-bottom: px2rem(1px) solid #cecece;
+                            width: 90%;
+                            margin: px2rem(10px) 0;
+                        }
+                        .txt{
+                            font-size: px2rem(12px);
+                            line-height: px2rem(20px);
+                            height: auto;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+      .ft{
+        width: 100%;
+        padding-bottom: px2rem(50px);
+        text-align: center;
+        color: #999;
+        background-color: #ececec;
+        .footer{
+            text-align: center;
+            width:100%;
+            margin: 0 auto;
+            padding-top: px2rem(10px);
+            .ftnav{
+                padding:0 px2rem(15px);
+                a{
+                    float: left;
+                    width: 25%;
+                    line-height: px2rem(18px);
+                    padding: px2rem(5px) 0;
+                    strong{
+                        font-weight: 500;
+                        color: #999;
+                        font-size:px2rem(14px);
+                    } 
+                }
+            }
+            .login{
+                width:100%;
+                padding: px2rem(5px) px2rem(15px) px2rem(10px);
+                line-height:px2rem(22px);
+                .left{
+                    margin-left:px2rem(5px);
+                    a{
+                        margin:0 px2rem(5px);
+                        font-weight:500;
+                        color:#666;
+                        font-size:px2rem(14px);
+                    }
+                    .bor{
+                        padding-right:px2rem(10px);
+                        border-right:px2rem(1px) solid #666;
+                    }
+                }
+                .right{
+                    a{
+                        margin:0 px2rem(5px);
+                        font-weight:500;
+                        color:#666;
+                        font-size:px2rem(14px);  
+                    }
+                } 
+            }
+        }
+        .contact{
+            width:100%;
+            border-top: px2rem(1px) solid #ddd;
+            padding: px2rem(12px) 0;
+            p{
+                font-size:px2rem(14px);
+                a{
+                    color:#999;
+                    font-size:px2rem(14px);
+                }
+            }
+        }
+    }
+    .gotop{
+        position: fixed;
+        right: px2rem(10px);
+        bottom: px2rem(60px);
+        z-index: 10;
+        a{
+            display: block;
+            background: url(https://r.ytrss.com/mobile/img/top.png) no-repeat;
+            background-size: 100% 100%;
+            width: px2rem(35px);
+            height: px2rem(35px);
+        }
+    }
 }

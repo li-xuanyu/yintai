@@ -123,12 +123,13 @@ router.get("/default",function(req,res){
 
 	})
 })
-router.get("/clears",function(req,res){
-	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
-	res.send(data);	
+// router.get("/clears",function(req,res){
+	
+// 	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appCart%22%2C%22userId%22%3A%22%22%2C%22channalId%22%3A1090000%2C%22skuInfos%22%3Anull%7D%5D",function(data){
+// 	res.send(data);	
 
-	})
-})
+// 	})
+// })
 
 router.get("/address",function(req,res){
 	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-458-8119%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307",function(data){
@@ -137,6 +138,10 @@ router.get("/address",function(req,res){
 	})
 })
 
-
+// router.get("/swipe2",function(req,res){
+// 	recom("/facade/json/com.yintai.goods.recommendation.facade/GetRecommendItemFacade/getRecommendation?params=%5B%7B%22positionId%22%3A%22appDetailPage%22%2C%22channalId%22%3A1090000%2C%22userId%22%3A%22%22%2C%22skuInfos%22%3A%5B%7B%22sku%22%3A%2221-458-8119%22%2C%22brandId%22%3A416%2C%22categoryId%22%3A14234%7D%2C%7B%22sku%22%3A%2221-458-8119%22%2C%22brandId%22%3A416%7D%5D%7D%5D",function(data){
+// 	res.send(data);
+// 	})
+// })
 module.exports=router;
 
