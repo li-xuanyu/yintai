@@ -5,6 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//-------------连接mongodb--------------
+var mongodb=require("mongoose");
+mongodb.connect("mongodb://localhost:27017/yintai")
+
+global.dbhandler=require("./dbmodel/dbhandler.js");
+//--------------------------------------
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var api=require("./api/api");

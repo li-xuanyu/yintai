@@ -34,7 +34,7 @@ const router=(
 					<Route path="/category" component={Category}/>
 					
 					<Route path="/cart" component={Cart}/>
-					<Route path="/details" component={Details}/>					<Route path="/mine" component={Mine}/>
+					<Route path="/details" component={Details}/>					
 					<Route path="/product/:productID" component={Product}/>
 					<Route path="/mine" render={()=>
 						<Mine>

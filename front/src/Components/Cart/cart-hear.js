@@ -9,7 +9,9 @@ class Hear extends React.Component{
 	render(){
 		return (
 		<div className="cart-header">
-			<NavLink to="/home" className="back-button">＜</NavLink>
+			<NavLink to="/home" className="back-button"   onClick={()=>{
+				this.props.history.goBack();
+			}}>＜</NavLink>
 
 			<NavLink to="/home" className="back-button">
 				<img src="https://r.ytrss.com/mobile/img/bar-default-home.png"/>

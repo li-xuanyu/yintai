@@ -4,6 +4,20 @@ class Footer extends React.Component{
 		super(prop);
 	}
 
+	componentDidMount() {
+	    window.onscroll=()=>{
+	    	var gotop=document.querySelector(".gotop");
+	    	document.body.scrollTop>1000?
+	    	gotop.style.display="block"
+	    	:
+	    	gotop.style.display="none"
+	    }
+	}
+
+	componentWillUpdate() {
+	    window.onscroll=null;
+	}
+
 	render(){
 		return (
 			<footer className="ft l">
@@ -24,8 +38,8 @@ class Footer extends React.Component{
 					</div>
 					<div className="login l">
 						<div className="l left">
-							<NavLink to="" className="bor">登录</NavLink>
-							<NavLink to="">注册</NavLink>		
+							<NavLink to="/mine" className="bor">登录</NavLink>
+							<NavLink to="/register">注册</NavLink>		
 						</div>
 						<div className="r right">
 							<NavLink to="">客户端下载</NavLink>
@@ -40,10 +54,15 @@ class Footer extends React.Component{
 					</p>
 					<p>浙ICP备10200233号</p>
 				</div>
-				{
+				<div className="gotop" style={{display:"none"}} onClick={()=>{
+					var timer = setInterval(function(){
+						if (document.body.scrollTop<=0) {
+							clearInterval(timer)
+						};
+						document.body.scrollTop-=1000
+					}, 100)
 
-				}
-				<div className="gotop">
+				}}>
 				<a href='javascript:;'></a>
 				</div>
 			</footer>

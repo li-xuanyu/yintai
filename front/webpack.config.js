@@ -19,15 +19,14 @@ module.exports = {
         port: '8888',
         historyApiFallback: true,
         
-        // 反向代理
-
-        // proxy:{
-        //    '/Services/*': {
-        //           target: 'https://m.yintai.com/',
-        //           host: 'm.yintai.com',
-        //           changeOrigin:true
-        //       }
-        // }
+        
+        proxy:{
+           '/api/*': {
+                  target:'http://localhost:3000',
+                  host: 'http://localhost:8888',
+                  changeOrigin:true
+              },
+        }
 
     },
 
@@ -93,3 +92,4 @@ module.exports = {
         new ExtractTextPlugin({ filename: 'css/[name].css', disable: false, allChunks: true })
     ]    
 }
+

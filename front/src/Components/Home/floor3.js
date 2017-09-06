@@ -48,7 +48,7 @@ class Floor3 extends React.Component{
 	}
 
 	componentDidMount() {
-	    axios.get("http://localhost:3000/api/home1").then(res=>{
+	    axios.get("/api/home1").then(res=>{
 	    	this.setState({
 	    		headlist1:res.data.data.templatelist[10].items,
 	    		productlist1_top:res.data.data.templatelist[11].items,
@@ -84,7 +84,7 @@ class Floor3 extends React.Component{
 	    	})
 	    })
 		
-		axios.get("http://localhost:3000/api/home2").then(res=>{
+		axios.get("/api/home2").then(res=>{
 			this.setState({
 				productlist10_bottom:res.data.data.templatelist[0].items,
 	    		headlist11:res.data.data.templatelist[1].items,

@@ -201,6 +201,8 @@ $base:30px; //html fontsize 就设置成这个值
                     width: 100%;
                     height: px2rem(55px);
                     text-align: center;
+                    line-height: px2rem(55px);
+                    font-size: px2rem(14px);
                     a{
                         display: block;
                         height: px2rem(55px);

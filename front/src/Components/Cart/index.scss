@@ -141,7 +141,8 @@ $base:30px; //html fontsize 就设置成这个值
     		color: #666;
     		font-size: px2rem(13px);
     		text-align: center;
-
+            padding-bottom:px2rem(20px);
+            
     		legend {
     			position:relative;
     			border: 0;
@@ -178,7 +179,6 @@ $base:30px; //html fontsize 就设置成这个值
 				width: 100%;
 				display: block;
     			margin: 0 auto;
-    			text-align: center;
     			margin-top: px2rem(10px);
 
                 .rec-list{
@@ -186,12 +186,13 @@ $base:30px; //html fontsize 就设置成这个值
                     width: 31%;
                     margin: 1.8% 0 0 1.8%;
                     background:#fff;
-                    padding-bottom:px2rem(10px);
+                    
 
                     img{
                         width: 100%;
                     }
                     span{
+                        text-align: center;
                         color: #333;
                         font-size: px2rem(12px);
                         line-height: 1.4em;
@@ -201,6 +202,12 @@ $base:30px; //html fontsize 就设置成这个值
                         display: -webkit-box;
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical; 
+                        padding: 0 px2rem(5px);
+                    }
+                    p{
+                        text-align: left;
+                        padding: 0 px2rem(5px);
+                        color:red;
                     }
                 }
     			

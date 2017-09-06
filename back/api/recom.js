@@ -9,7 +9,7 @@ function recom(path,callback){
         method:'get',
 
         headers:{
-            Authorization:'Bearer a3ab935a1b6f2eb7e5071e1304dc6c5b541fe9d7'
+            Authorization:"Bearer 00ec73d6335fdfb1964c43db20390314e40a3852"
         }
     };
 

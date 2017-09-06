@@ -8,7 +8,7 @@ class Main extends React.Component{
 	}
 
 	componentDidMount() {
-	    axios.get("http://localhost:3000/api/home2").then(res=>{
+	    axios.get("/api/home2").then(res=>{
 	    	this.setState({
 	    		mainlist:res.data.data.templatelist.slice(9)
 	    	})
