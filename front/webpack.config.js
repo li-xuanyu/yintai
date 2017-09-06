@@ -22,8 +22,8 @@ module.exports = {
         //反向代理
 
         // proxy:{
-        //    '/facade/json/*': {
-        //           target: 'https://recommend-prod.yintai.com',
+        //    '/Services/*': {
+        //           target: 'http://h5.yintai.com',
         //           host: 'recommend-prod.yintai.com',
         //           changeOrigin:true
         //       }
