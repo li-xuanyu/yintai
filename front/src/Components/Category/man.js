@@ -1,6 +1,5 @@
-//时尚名品
 import {NavLink} from 'react-router-dom';
-class Famous extends React.Component{
+class Manul extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state={
@@ -11,10 +10,9 @@ class Famous extends React.Component{
 		}
 	}
 
-	componentDidMount() {
-		console.log(this.props.id);
-		console.log(this.props.match.params.categoryid);
-		let url=`http:/\/localhost:3000/api/famous2?id=${this.props.id}`;
+	componentWillReceiveProps(newprop){
+		console.log(newprop.famousId);
+		let url=`http:/\/localhost:3000/api/famous2?id=${newprop.famousId}`;
 	    axios.get(url).then(res=>{
 	    	this.setState({
 	    		brand:res.data.data.brand.brandrecommend,
@@ -22,6 +20,10 @@ class Famous extends React.Component{
 	    		recommend:res.data.data.recommend.categoryrecommend
 	    	})
 	    })
+	}
+
+	componentDidMount() {
+		
 	}
 
 	render(){
@@ -64,10 +66,11 @@ class Famous extends React.Component{
 				)}
 				</div>
 
-
 			</div>	
 		)
 	}
+
+
 }
 
-export default Famous;
+export default Manul;

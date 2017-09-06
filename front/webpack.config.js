@@ -23,7 +23,7 @@ module.exports = {
 
         // proxy:{
         //    '/facade/json/*': {
-        //           target: 'https://recommend-prod.yintai.com',
+        //           target: 'https://h5.yintai.com',
         //           host: 'recommend-prod.yintai.com',
         //           changeOrigin:true
         //       }

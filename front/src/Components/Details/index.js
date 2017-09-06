@@ -5,13 +5,13 @@ class Dateils extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state={
-			address:21-423-9168
+			address:[]
 		}
 	}
 	componentDidMount() {
-	    axios.get("http://localhost:3000/api/address").then(res=>{
-	    	console.log(res.data)
-	    })
+	    // axios.get("http://localhost:3000/api/address").then(res=>{
+	    // 	console.log(res.data)
+	    // })
 	}
 	render(){
 		return(

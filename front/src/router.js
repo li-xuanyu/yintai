@@ -22,7 +22,7 @@ import Newest from "./Components/Newest";
 import Specialsale from "./Components/Specialsale";
 import Countdown from "./Components/Countdown";
 import Advance from "./Components/Advance";
-import Famous from "./Components/Famous";
+import Categorydetail from "./Components/Famous";
 import Woman from "./Components/Woman";
 import Man from "./Components/Man";
 import Underwear from "./Components/Underwear";
@@ -61,26 +61,15 @@ const router=(
 							</Switch>
 						</Limitbuy>
 					}/>
-
 					<Route path="/category" render={()=>
 						<Category>
 							<Switch>
-								<Route path="/category/famous" component={Famous}/>//时尚名品
-								<Route path="/category/woman" component={Woman}/>//潮流女装
-								<Route path="/category/man" component={Man}/>//精品男装
-								<Route path="/category/underwear" component={Underwear}/>//品质内衣
-								<Route path="/category/cosmetics" component={Cosmetics}/>//护肤彩妆
-								<Route path="/category/boot" component={Boot}/>//品质鞋靴
-								<Route path="/category/bag" component={Bag}/>//时尚箱包
-								<Route path="/category/outdoor" component={Outdoor}/>//运动户外
-								<Route path="/category/jewelry" component={Jewelry}/>//珠宝饰品
-								<Route path="/category/baby" component={Baby}/>//母婴精选
-								<Route path="/category/house" component={House}/>//家居家纺
-								<Redirect from="/category" to="/category/famous"/>
+							<Route path="/category/:categoryid" component={Categorydetail}/>
+							<Redirect from="/category" to="/category/88"/>
 							</Switch>
-						</Category> 
-					}/>
-					
+						</Category>
+					}/>//时尚名品
+					<Route path="/category/:categoryid" component={Categorydetail}/>
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
 					<Route path="/product" render={()=>
