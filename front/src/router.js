@@ -22,17 +22,6 @@ import Newest from "./Components/Newest";
 import Specialsale from "./Components/Specialsale";
 import Countdown from "./Components/Countdown";
 import Advance from "./Components/Advance";
-import Categorydetail from "./Components/Famous";
-import Woman from "./Components/Woman";
-import Man from "./Components/Man";
-import Underwear from "./Components/Underwear";
-import Cosmetics from "./Components/Cosmetics";
-import Boot from "./Components/Boot";
-import Bag from "./Components/Bag";
-import Outdoor from "./Components/Outdoor";
-import Jewelry from "./Components/Jewelry";
-import Baby from "./Components/Baby";
-import House from "./Components/House";
 import Details from "./Components/Details";
 import Default from "./Components/Default";
 import Sales from "./Components/Sales";
@@ -61,15 +50,7 @@ const router=(
 							</Switch>
 						</Limitbuy>
 					}/>
-					<Route path="/category" render={()=>
-						<Category>
-							<Switch>
-							<Route path="/category/:categoryid" component={Categorydetail}/>
-							<Redirect from="/category" to="/category/88"/>
-							</Switch>
-						</Category>
-					}/>//时尚名品
-					<Route path="/category/:categoryid" component={Categorydetail}/>
+					<Route path="/category" component={Category}/>
 					<Route path="/cart" component={Cart}/>
 					<Route path="/details" component={Details}/>
 					<Route path="/product" render={()=>

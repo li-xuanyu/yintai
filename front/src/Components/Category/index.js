@@ -21,7 +21,7 @@ class Category extends React.Component{
 		this.state={
 			isShow:false,
 			famouslist:[],
-			famousId:150
+			famousId:88
 		}
 	}
 
