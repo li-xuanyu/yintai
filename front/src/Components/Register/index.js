@@ -87,7 +87,7 @@ class Register extends React.Component{
     	    alert("密码不能为空");
     	    return false;
     	}
-    	else if(!(/^(?!\d+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/.test(password))){
+    	else if(!(/^(?!\d+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/.test(password))){
     	    alert("密码为6到12位，英文+数字");
     	    return false;
     	}

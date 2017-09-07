@@ -237,7 +237,6 @@ class Main extends React.Component{
 						};
 						document.body.scrollTop-=1000
 					}, 100)
-
 				}}>
 				<a href='javascript:;'></a>
 				</div>

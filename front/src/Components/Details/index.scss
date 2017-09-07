@@ -34,7 +34,57 @@ $base:30px; //html fontsize 就设置成这个值
 @function px2rem($px){
   @return $px/$base *1rem;
 }
-
+#product-module{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        height: px2rem(42px);
+        background-color: #fff;
+        .cart{
+            width: px2rem(50px);
+            height: px2rem(42px);
+            text-align: center;
+            font-size: px2rem(12px);
+            border-top: px2rem(1px) solid #d5d5d5;
+            position: relative;
+            a{
+                display: block;
+                padding: px2rem(4px) 0;
+                color: #666;
+                font-size:px2rem(12px);
+                i{
+                    display: block;
+                    width: px2rem(22px);
+                    height: px2rem(20px);
+                    margin: 0 auto;
+                    background: url(https://r.ytrss.com/mobile/img/cart.png) 0 0/100% no-repeat;
+                }
+            }
+        }
+        .other{
+            width:px2rem(325px);
+            height: px2rem(42px);
+            line-height: px2rem(42px);
+            .other-buy{
+                width:50%;
+                display: inline-block;
+                text-align: center;
+                background-color: #e5004f;
+                color: #fff;
+                font-size:px2rem(14px);
+            }
+            .other-now{
+                width:50%;
+                display: inline-block;
+                text-align: center;
+                background-color: #FF7039;
+                color: #fff;
+                font-size:px2rem(14px);
+            }
+        }
+}
 #detail{
 	width:100%;
 	height:100%;
