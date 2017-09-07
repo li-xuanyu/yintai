@@ -26,13 +26,9 @@ $base:30px; //html fontsize 就设置成这个值
 }
 
 #product{
-	header {
-		height: px2rem(50px);
-		text-align: center;
-		line-height: px2rem(50px);
-		padding-bottom:px2rem(8px);
-		border-bottom:px2rem(1px) solid #ccc;
-	}
+	width:100%;
+	padding-top:px2rem(40px);
+
 	nav{
 		border-bottom:px2rem(1px) solid #ccc;
 		.herald{

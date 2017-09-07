@@ -9,7 +9,7 @@ class Hear extends React.Component{
 	render(){
 		return (
 		<div className="yintai-header">
-			<NavLink to="/home" className="back-button"  onClick={()=>{
+			<NavLink to="/home" className="back-button" onClick={()=>{
 				this.props.history.goBack();
 			}}>＜</NavLink>
 			<div className="hear-name">商品详情</div>

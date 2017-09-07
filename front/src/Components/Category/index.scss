@@ -30,13 +30,22 @@ $base:30px; //html fontsize 就设置成这个值
 #category{
     width: 100%;
 	
+    .bjs{
+        width: 100%;
+        height:100%;
+        z-index: 50;
+        position: fixed;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,.1);
+    }
 
 	.yintai-header {
     	width: 100%;
         position: fixed;
         top:0;
         left:0;
-    	z-index: 510;
+    	z-index: 30;
     	background-color: #fff;
     	height: px2rem(40px);
     	border-bottom: px2rem(1px) solid #ccc;

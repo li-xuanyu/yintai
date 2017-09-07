@@ -28,7 +28,7 @@ class Nav extends React.Component{
 							</NavLink>
 						</li>
 						<li className="l">
-							<NavLink to="/cart">
+							<NavLink to="/cart/购物车">
 								<img src="https://r.ytrss.com/mobile/img/bar-default-cart.png"/>
 								<span>购物车</span>
 							</NavLink>

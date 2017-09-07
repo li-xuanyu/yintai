@@ -1,7 +1,8 @@
 import "./index.scss";
 import Nav from "./nav";
-import Header from "./header";
 import InfiniteScroll from 'react-infinite-scroller';
+import Alert from "../Category/alert-content.js";
+import "../Category/index.scss";
 import{
 	BrowserRouter as Router,
 	Route,
@@ -16,11 +17,16 @@ class Product extends React.Component{
 			defaultlist:[],
 			currentPage:1,
 			page_count:0,
-			hasMore:true
+			hasMore:true,
+			name:'',
+			isShow:false
 		}
 	}
 	componentDidMount() {
 		console.log(this.props.match.params.productID)
+		this.setState({
+			name:this.props.match.params.name
+		})
 		axios.get(`/api/discount?page_index=${this.state.currentPage}&bargainid=${this.props.match.params.productID}`).then(res=>{
 		
 		this.setState({
@@ -32,14 +38,18 @@ class Product extends React.Component{
 	}
 	render(){
 		return(
+			<div id="category">
+			<div className="yintai-header">
+			<NavLink to="/home" className="back-button" onClick={()=>{
+				this.props.history.goBack();
+			}}>＜</NavLink>
+			<div className="hear-name">{this.state.name}</div>
+			<div className="xiala r" onClick={this.handleClick.bind(this)}>
+				<span>···</span>
+				</div>		
+			</div>
+			<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
 			<div id="product">
-				<header>
-				<span className="l" onClick={()=>{
-					this.props.history.goBack()
-				}}>＜</span>
-				<span className="middle">优家美妆工具</span>
-				<span className="r">...</span>
-			</header>
 				<Nav></Nav>
 				<section>
 					<div id="default">
@@ -53,7 +63,9 @@ class Product extends React.Component{
 				>
 					{
 						this.state.defaultlist.map((item,index)=>
-							<li key={index}>
+							<li key={index} onClick={()=>{
+								this.props.history.push(`/details/${item.itemcode}`)
+							}}>
 								<img src={item.image} className="l"/>
 								<div className="intro l">
 									<p className="name">{item.name}</p>
@@ -68,6 +80,7 @@ class Product extends React.Component{
 				</ul>
 			</div>
 				</section>
+			</div>
 			</div>	
 		)
 	}
@@ -85,6 +98,11 @@ class Product extends React.Component{
 			this.setState({
 				defaultlist:[...this.state.defaultlist,...res.data.data.product_list]
 			})
+		})
+	}
+	handleClick(){
+		this.setState({
+			isShow:!this.state.isShow
 		})
 	}
 }

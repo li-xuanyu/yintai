@@ -3,7 +3,34 @@ import {NavLink} from "react-router-dom"
 class Clear extends React.Component{
 	constructor(prop){
 		super(prop);
+		this.state=({
+			isHide:false,
+			list:[]
+		})
 		
+	}
+
+	componentDidMount() {
+
+		let url=this.props.cartID;
+		if(url.props.match.params.cartID==="购物车"){
+			this.setState({
+				isHide:false
+			})
+
+		}else{
+			axios.get(`/api/address?itemcode=${url.props.match.params.cartID}`).then(res=>{
+	    		console.log(res.data)
+	    		this.setState({
+	    			list:[...this.state.list,...res.data.data.products[0].skuproperty[0].url]
+	    		})
+	    	})
+	    	this.setState({
+				isHide:true
+			})
+		}
+	    
+
 	}
 
 	render(){
@@ -17,7 +44,7 @@ class Clear extends React.Component{
 				<span>移动端首单立减<span>5</span>元，速来占便宜啦</span>
 				</div>
 			</div>
-
+			
 			<div className="clear-cart">
 				<div className="clear-tip">
 				<img src="https://r.ytrss.com/mobile/img/clearcart2.png"/>

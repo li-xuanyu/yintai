@@ -18,7 +18,6 @@ import Passport from "./Components/Passport";
 import Accont from "./Components/Accont";
 import Register from "./Components/Register";
 import Details from "./Components/Details";
-import Sales from "./Components/Sales";
 import Product from "./Components/Product";
 
 
@@ -32,9 +31,9 @@ const router=(
 
 					<Route path="/category" component={Category}/>
 					<Route path="/register" component={Register}/>
-					<Route path="/cart" component={Cart}/>
-					<Route path="/details" component={Details}/>					
-					<Route path="/product/:productID" component={Product}/>
+					<Route path="/cart/:cartID" component={Cart}/>
+					<Route path="/details/:itemcode/" component={Details}/>					
+					<Route path="/product/:productID/:name" component={Product}/>
 					<Route path="/mine" render={()=>
 						<Mine>
 							<Switch>

@@ -21,42 +21,28 @@ class Category extends React.Component{
 		this.state={
 			isShow:false,
 			famouslist:[],
-			famousId:88
+			famousId:88,
+			isHide:false
 		}
 	}
-
-	componentDidMount() {
-	    axios.get("/api/famous1").then(res=>{
-	    	this.setState({
-	    		famouslist:res.data.data.data
-	    	})
-	    })
-	}
-
 
 	render(){
 		return(
 			<div id="category">
+				{
+					this.state.isHide?
+					<div className="bjs"></div>
+					:
+					null
+				}
+					
 				<Hear event={this.handleClick.bind(this)}></Hear>
 				<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
 				<Seek></Seek>
 				<section id="recom">
-				<div className="famous">
-				<ul className="famousul">
-					{this.state.famouslist.map(item=>
-
-					<li key={item.id} onClick={()=>{
-						//ÇÐ»»Ò³Ãæ  
-						this.setState({
-							famousId:item.id
-						})
-						// console.log(item.id)
-					}} className={this.state.famousId==item.id?"famouslist":""}>{item.name}</li>
-
-					)}
-				</ul>
-				</div>
-				<Manul famousId={this.state.famousId}></Manul>	
+				<Mous event={this.handleId.bind(this)}></Mous>
+				<Manul famousId={this.state.famousId} ent={this}></Manul>
+				
 				</section>
 				
 			</div>
@@ -69,6 +55,11 @@ class Category extends React.Component{
 		})
 	}
 
+	handleId(evt){
+		this.setState({
+			famousId:evt
+		})
+	}
 }
 
 export default Category;
