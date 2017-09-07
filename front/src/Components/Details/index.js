@@ -29,6 +29,7 @@ class Dateils extends React.Component{
 			</div>
 			<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
 			<Main itemcode={this}></Main>
+			
 			</div>	
 		)
 	}

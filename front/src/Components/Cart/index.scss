@@ -104,6 +104,92 @@ $base:30px; //html fontsize 就设置成这个值
 			}	
 		}	
 
+        .cart-list{
+            float: left;
+            display: block;
+            width: 100%;
+            background:#fff;
+            margin-top: px2rem(15px);
+
+            .cart-pu{
+                width: 100%;
+                height: px2rem(30px);
+                span{
+                    float: left;
+                    line-height: px2rem(30px);
+                    font-size: px2rem(14px);
+                    padding: 0 px2rem(5px);
+                    text-align: center;
+                    background-color:#ff3b7f;
+                }
+            }
+
+            .cart-dan{
+                width: 100%;
+                height: px2rem(106px);
+                border-bottom: px2rem(1px) solid #aaa;
+
+                .cart-dian{
+                    display: block;
+                    width: px2rem(20px);
+                    height: px2rem(20px);
+                    border-radius:px2rem(10px);
+                    border: px2rem(1px) solid #aaa;
+                    margin: px2rem(40px) px2rem(10px);
+                
+                    span{
+                        display: block;
+                        width: px2rem(14px);
+                        height: px2rem(14px);
+                        border-radius:px2rem(7px);
+                        background-color:#ff3b7f;
+                        margin: px2rem(2px);
+                    }
+                }
+                .cart-tu{
+                    width: 88%;
+
+                    img{
+                        float: left;
+                        display: block;
+                        width: px2rem(60px);
+                        margin-top: px2rem(15px);
+                        border: px2rem(1px) solid #aaa;
+                    }
+                    p{
+                        width: 70%;
+                        float: left;
+                        font-size: px2rem(20px);
+                        margin-top: px2rem(15px);
+                        margin-left: px2rem(10px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    span{
+                        width: 40%;
+                        margin-top: px2rem(3px);
+                        margin-left: px2rem(10px);
+                        float: left;
+                        font-size: px2rem(16px);
+                    }
+
+                    div{
+                        text-align: center;
+                        font-size: px2rem(18px);
+
+                        button{
+                            font-size: px2rem(18px);
+                            width: px2rem(18px);
+                            line-height: px2rem(18px);
+                            margin: 0 px2rem(10px);
+                        }
+                    }
+                }
+            }
+
+        }
+
 		.clear-cart {
 			float: left;
     	    display: block;

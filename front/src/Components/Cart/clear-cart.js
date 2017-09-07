@@ -5,14 +5,21 @@ class Clear extends React.Component{
 		super(prop);
 		this.state=({
 			isHide:false,
+			name:'',
+			ytprice:'',
+			name2:'',
+			url:'',
+			value:'',
 			list:[]
+
 		})
 		
 	}
 
 	componentDidMount() {
-
+		
 		let url=this.props.cartID;
+		console.log(url.props.match.params.cartID)
 		if(url.props.match.params.cartID==="购物车"){
 			this.setState({
 				isHide:false
@@ -20,11 +27,19 @@ class Clear extends React.Component{
 
 		}else{
 			axios.get(`/api/address?itemcode=${url.props.match.params.cartID}`).then(res=>{
-	    		console.log(res.data)
+	    		
 	    		this.setState({
-	    			list:[...this.state.list,...res.data.data.products[0].skuproperty[0].url]
+	    			name:res.data.data.products[0].name,
+	    			ytprice:res.data.data.products[0].ytprice,
+	    			name2:res.data.data.products[0].skuproperty[0].name,
+	    			url:res.data.data.products[0].skuproperty[0].url,
+	    			value:res.data.data.products[0].skuproperty[0].value,
+	    			list:res.data.data.products
 	    		})
+	    		console.log(this.state.list.length)
+	    		
 	    	})
+	    	
 	    	this.setState({
 				isHide:true
 			})
@@ -44,8 +59,33 @@ class Clear extends React.Component{
 				<span>移动端首单立减<span>5</span>元，速来占便宜啦</span>
 				</div>
 			</div>
-			
-			<div className="clear-cart">
+			{
+				this.state.isHide==true?
+				<div className="cart-list">
+					<p className="cart-pu"><span>普通商品</span></p>
+					<div className="cart-dan">
+						<div className="cart-dian l">
+							<span onClick={()=>{
+
+							}} className="color1 color2"></span>
+						</div>
+
+						<div className="cart-tu l" >
+							<img src={this.state.url}/>
+							<p>{this.state.name}</p>
+							<span> {this.state.name2} : {this.state.value} </span>
+							<span>￥{this.state.ytprice}.00</span>
+							<div className="button r">
+								<button className="l">-</button>
+								1
+								<button className="r">+</button>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+				:
+				<div className="clear-cart">
 				<div className="clear-tip">
 				<img src="https://r.ytrss.com/mobile/img/clearcart2.png"/>
 				<p>购物车空空哒</p>
@@ -54,7 +94,11 @@ class Clear extends React.Component{
 				<div className="clear-button">
 				<NavLink to="/home" >随便逛逛</NavLink>
 				</div>
-			</div>
+				</div>
+			}
+				
+
+			
 
 			<div className="rec-title">
 				<legend>

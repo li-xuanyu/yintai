@@ -12,9 +12,13 @@ class Cart extends React.Component{
 		return(
 			<div id="cart">
 			<Carthear cart={this}></Carthear>
-			<Clear cartID={this}></Clear>
+			<Clear cartID={this} ></Clear>
 			</div>	
 		)
+	}
+
+	handleColor(){
+		
 	}
 }
 
