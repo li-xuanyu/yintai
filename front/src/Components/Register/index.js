@@ -47,7 +47,6 @@ class Register extends React.Component{
 		})
 	}
 	handleClick1(){
-		console.log(111);
 		var user=document.querySelector("#cellphone").value;
 		var password=document.querySelector("#password").value;
     	var pConfirm=document.querySelector("#repassword").value;
@@ -59,8 +58,14 @@ class Register extends React.Component{
     		axios.post('/api/register',{
     			tel:user,
     			password:password
-    		}).then(()=>{
-				alert("注册成功");
+    		}).then(res=>{
+				if(res.data){
+					alert("注册成功");
+					location.href="/mine";
+				}
+				else{
+					alert("该用户名已被注册");
+				}
     		})
     	}	
 

@@ -7,11 +7,27 @@ router.post('/register',function(req,res,next){
 	//req.body接受前端的post请求；
 	//将用户名存入数据库 mongodb<=mongoose模块
 	//利用dbhandler.user
-		dbhandler.user.create({
-			tel:req.body.tel,
-			password:req.body.password
-		})
+	dbhandler.user.findOne({
+		tel:req.body.tel
+	},function(error,data){
+		if(data){
+			res.send(false)
+		}
+		else{
+			dbhandler.user.create({
+				tel:req.body.tel,
+				password:req.body.password
+			},function(error,result){
+				if(!error){
+					res.send(true);
+				}
+				else{
+					console.log(error);
+				}
+			})
+		}
 	})
+})
 
 //登录
 router.post('/login',function(req,res,next){
@@ -22,12 +38,10 @@ router.post('/login',function(req,res,next){
 		password:req.body.password
 	},function(error,data){
 		if(data){
-			return true;
-			alert(true);
+			res.send(true);
 		}
 		else{
-			return false;
-			alert(false);
+			res.send(false);
 		}
 	})
 
