@@ -26,7 +26,7 @@ class Alertpro extends React.Component{
 						<img src="https://r.ytrss.com/mobile/img/bar-default-class.png"/>
 						<span>分类</span>
 					</NavLink>
-					<NavLink to="/cart">
+					<NavLink to="/cart/购物车">
 						<img src="https://r.ytrss.com/mobile/img/bar-default-cart.png"/>
 						<span>购物车</span>
 					</NavLink>
