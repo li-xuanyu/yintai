@@ -148,11 +148,13 @@ $base:30px; //html fontsize 就设置成这个值
                 }
                 .cart-tu{
                     width: 88%;
+                    height:px2rem(80px);
 
                     img{
                         float: left;
                         display: block;
                         width: px2rem(60px);
+                        height:px2rem(80px);
                         margin-top: px2rem(15px);
                         border: px2rem(1px) solid #aaa;
                     }

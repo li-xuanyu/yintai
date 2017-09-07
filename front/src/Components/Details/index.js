@@ -29,7 +29,21 @@ class Dateils extends React.Component{
 			</div>
 			<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
 			<Main itemcode={this}></Main>
-			
+
+			<div id="product-module" className="l">
+					<div className="cart l">
+						<a href="javascript:;">
+							<i></i>购物车
+						</a>
+					</div>
+					<div className="other l">
+						<span className="other-buy l" onClick={()=>{
+							this.props.history.push(`/cart/${this.props.match.params.itemcode}`)
+						}}>加入购物车</span>
+						<span className="other-now l">立即购买</span>
+					</div>
+				</div>
+
 			</div>	
 		)
 	}

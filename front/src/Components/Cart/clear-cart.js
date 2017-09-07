@@ -32,17 +32,18 @@ class Clear extends React.Component{
 	    			name:res.data.data.products[0].name,
 	    			ytprice:res.data.data.products[0].ytprice,
 	    			name2:res.data.data.products[0].skuproperty[0].name,
-	    			url:res.data.data.products[0].skuproperty[0].url,
+	    			url:res.data.data.products[0].middleimgurls[0],
 	    			value:res.data.data.products[0].skuproperty[0].value,
-	    			list:res.data.data.products
+	    			list:res.data.data.products[0]
 	    		})
-	    		console.log(this.state.list.length)
 	    		
 	    	})
 	    	
 	    	this.setState({
 				isHide:true
 			})
+
+			setTimeout(()=>{console.log(this.state.list)},1000)
 		}
 	    
 
