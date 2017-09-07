@@ -2,7 +2,39 @@ var express=require('express');
 var router=express.Router();
 var spider=require("./spider");
 
+//注册
+router.post('/register',function(req,res,next){
+	//req.body接受前端的post请求；
+	//将用户名存入数据库 mongodb<=mongoose模块
+	//利用dbhandler.user
+		dbhandler.user.create({
+			tel:req.body.tel,
+			password:req.body.password
+		})
+	})
+
+//登录
+router.post('/login',function(req,res,next){
+	//req.body接受前端的post请求；
+	
+	dbhandler.user.findOne({
+		tel:req.body.tel,
+		password:req.body.password
+	},function(error,data){
+		if(data){
+			return true;
+			alert(true);
+		}
+		else{
+			return false;
+			alert(false);
+		}
+	})
+
+})
+
 //首页数据
+
 router.get("/home1",function(req,res){
 	spider("/Services/Proxy.ashx?r=20179021951&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=1",function(data){
 	res.send(data);	

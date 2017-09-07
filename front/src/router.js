@@ -18,7 +18,6 @@ import Passport from "./Components/Passport";
 import Accont from "./Components/Accont";
 import Register from "./Components/Register";
 import Details from "./Components/Details";
-import Sales from "./Components/Sales";
 import Product from "./Components/Product";
 
 
