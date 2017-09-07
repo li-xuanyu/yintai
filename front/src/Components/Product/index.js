@@ -69,7 +69,6 @@ class Product extends React.Component{
 								<img src={item.image} className="l"/>
 								<div className="intro l">
 									<p className="name">{item.name}</p>
-									<p className="special">{item.promotionlist[0].name}</p>
 									<p className="original_cost">짜{item.price}.00</p>
 									<p className="current_price">짜{item.promotion_price}.00</p>
 								</div>
