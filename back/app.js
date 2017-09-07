@@ -15,6 +15,7 @@ global.dbhandler=require("./dbmodel/dbhandler.js");
 var index = require('./routes/index');
 var users = require('./routes/users');
 var api=require("./api/api");
+var register=require("./routes/register");
 var app = express();
 
 // view engine setup
@@ -31,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-
+app.use('/register',register);
 app.use('/api',api);//饿了么的爬虫接口
 
 // catch 404 and forward to error handler

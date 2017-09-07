@@ -12,13 +12,13 @@ class Passport extends React.Component{
 				<div className="login-p l">
 					<div className="text">
 						<img src="https://h5.yintai.com/m/images/ueser-img-75da284743.png" className="l"/>
-						<input type="text" placeholder="请输入银泰护照号(手机号)" id="name" className="l"/>
+						<input type="text" placeholder="请输入银泰护照号(手机号)" id="name" className="l" maxLength="11"/>
 					</div>
 					<div className="password">
 						<img src="https://h5.yintai.com/m/images/pass-img-c8ba68915f.png" className="l"/>
-						<input type="password" placeholder="请输入密码" id="password" className="l"/>
+						<input type="password" placeholder="请输入密码" id="password" className="l" maxLength="12"/>
 					</div>
-					<div id="login">登 录</div>
+					<div id="login" onClick={this.handleClick.bind(this)}>登 录</div>
 					<div className="login-reg">
 						<a className="forget-word l">忘记密码?</a>
 						<a className="register r" href="/register">注册</a>
@@ -34,6 +34,24 @@ class Passport extends React.Component{
 				</div>
 			</div>	
 		)
+	}
+
+	handleClick(){
+		console.log(222);
+		var user=document.querySelector('#name').value;
+		var password=document.querySelector("#password").value;
+		axios.post('/api/login',{
+    			tel:user,
+    			password:password
+    		}).then(res=>{
+    			if(res.result){
+    				alert('登录成功');
+    				location.href="/home";
+    			}
+    			else{
+    				alert("登录失败");
+    			}
+    	})
 	}
 }
 
