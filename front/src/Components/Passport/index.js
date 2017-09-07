@@ -44,14 +44,15 @@ class Passport extends React.Component{
     			tel:user,
     			password:password
     		}).then(res=>{
-    			if(res.result){
-    				alert('登录成功');
-    				location.href="/home";
+    			if(res.data){
+    				alert('登录成功,即将跳转到主页');
+    				this.props.history.push("/home");
     			}
     			else{
-    				alert("登录失败");
+    				alert("用户名/密码输入错误");
+    				this.props.history.push("/mine");
     			}
-    	})
+    		})
 	}
 }
 
