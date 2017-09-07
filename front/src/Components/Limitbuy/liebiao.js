@@ -57,9 +57,6 @@ class Liebiao extends React.Component{
 			
 
 	    }
-	    	
-    
-		
 
 	render(){
 		return <div>
@@ -70,7 +67,7 @@ class Liebiao extends React.Component{
 					{this.state.recommendlist1.map(item=>
 							<li key={item.id} onClick={()=>{
 								let that=this.props.event;
-								that.props.history.push(`/product/${item.id}`)
+								that.props.history.push(`/product/${item.id}/${item.name}`)
 							}}>
 								<img src={item.imgurl}/>
 								<p>{item.name}</p>
@@ -87,7 +84,7 @@ class Liebiao extends React.Component{
 						this.state.recommendlist2.map((item,index)=>
 							<li key={index} onClick={()=>{
 								let that=this.props.event;
-								that.props.history.push(`/product/${item.itemcode}`)
+								that.props.history.push(`/product/${item.itemcode}/${item.name}`)
 							}}>
 								<img src={item.image} className="l"/>
 								<div className="intro">

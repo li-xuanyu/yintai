@@ -29,7 +29,7 @@ class Footer extends React.Component{
 						<NavLink to="/category" className="l">
 							<strong>分类</strong>
 						</NavLink>
-						<NavLink to="/cart" className="l">
+						<NavLink to="/cart/购物车" className="l">
 							<strong>购物车</strong>
 						</NavLink>
 						<NavLink to="/mine" className="l">

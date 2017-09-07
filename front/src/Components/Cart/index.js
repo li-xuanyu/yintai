@@ -2,7 +2,6 @@
 import "./index.scss";
 import Carthear from "./cart-hear";
 import Clear from "./clear-cart";
-import Rec from "./clear-rec";
 
 class Cart extends React.Component{
 	constructor(prop){
@@ -12,8 +11,8 @@ class Cart extends React.Component{
 	render(){
 		return(
 			<div id="cart">
-			<Carthear></Carthear>
-			<Clear></Clear>
+			<Carthear cart={this}></Carthear>
+			<Clear cartID={this}></Clear>
 			</div>	
 		)
 	}

@@ -2,7 +2,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
-class Alert extends React.Component{
+class Alertpro extends React.Component{
 	constructor(prop){
 		super(prop);
 		
@@ -47,4 +47,4 @@ class Alert extends React.Component{
 	
 }
 
-export default Alert;
+export default Alertpro;

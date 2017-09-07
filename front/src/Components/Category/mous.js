@@ -4,7 +4,8 @@ class Mous extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state={
-			famouslist:[]
+			famouslist:[],
+			famousName:88
 		}
 		
 	}
@@ -21,18 +22,17 @@ class Mous extends React.Component{
 	render(){
 		return(
 			<div className="famous">
-				<ul className="famousul" onClick={()=>{
-					console.log(this.state.famousId)
-				}}>
+				<ul className="famousul">
 					{this.state.famouslist.map(item=>
 
 					<li key={item.id} onClick={()=>{
 						//切换页面  
+						this.props.event(item.id);
 						this.setState({
-							famousId:item.id
+							famousName:item.id
 						})
-
-					}}><NavLink to="/category" activeClassName="famouslist">{item.name}</NavLink></li>
+						// console.log(item.id)
+					}} className={this.state.famousName==item.id?"famouslist":""}>{item.name}</li>
 
 					)}
 				</ul>

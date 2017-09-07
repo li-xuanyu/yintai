@@ -93,7 +93,7 @@ router.get("/products",function(req,res){
 })
 
 router.get("/address",function(req,res){
-	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%2221-458-8119%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307",function(data){
+	spider("/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%22"+req.query.itemcode+"%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307",function(data){
 	res.send(data);	
 
 	})

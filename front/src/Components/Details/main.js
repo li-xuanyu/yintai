@@ -10,7 +10,9 @@ class Main extends React.Component{
 	}
 
 	componentDidMount() {
-	    axios.get("/api/address").then(res=>{
+		let url=this.props.itemcode;
+	    axios.get(`/api/address?itemcode=${url.props.match.params.itemcode}`).then(res=>{
+	    	console.log(res.data)
 	    	this.setState({
 				swiper:res.data.data.products[2].largeimgurls,
 				imgs:res.data.data.products[2].superlargeimgurls
