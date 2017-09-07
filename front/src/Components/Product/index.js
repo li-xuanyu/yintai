@@ -81,7 +81,7 @@ class Product extends React.Component{
 			// console.log("gg")
 			return;
 		}
-		axios.get(`http:/\/localhost:3000/api/discount?page_index=${this.state.currentPage}`).then(res=>{
+		axios.get(`/api/discount?page_index=${this.state.currentPage}&bargainid=${this.props.match.params.productID}`).then(res=>{
 			this.setState({
 				defaultlist:[...this.state.defaultlist,...res.data.data.product_list]
 			})
