@@ -22,7 +22,11 @@ class Liebiao extends React.Component{
 			console.log(res.data)
 			this.setState({
 				recommendlist1:res.data.data.activityinfo[0].activitylist
+
 			})
+			setTimeout(()=>{
+					this.props.logo()
+				},500)
 				
 		})
 
@@ -35,28 +39,30 @@ class Liebiao extends React.Component{
 	    })
 	    
 	    	if(nextProps.isId===3){
-				console.log(nextProps.isId)
 	    		axios.get("/api/sales").then(res=>{
 				// console.log(res.data.data.productlist)
 				this.setState({
 					recommendlist2:res.data.data.productlist
 				})
-				
+	
 			})
 	    	}else{
 	    		
 	    		axios.get(`/api/recommend?type=${nextProps.isId}`).then(res=>{
 					
-				this.setState({
-					recommendlist1:res.data.data.activityinfo[0].activitylist
-				})
-				
+					this.setState({
+						recommendlist1:res.data.data.activityinfo[0].activitylist,
+						
+					})
+					
 				})
 	    	}
 	    	
-			
+			setTimeout(()=>{
+				this.props.logo()
+			},500)
 
-	    }
+}
 
 	render(){
 		return <div>

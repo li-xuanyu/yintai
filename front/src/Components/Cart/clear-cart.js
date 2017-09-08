@@ -30,11 +30,13 @@ class Clear extends React.Component{
 				<span>移动端首单立减<span>5</span>元，速来占便宜啦</span>
 				</div>
 			</div>
+
+			<div className="cart-list" >
+					<p className="cart-pu"><span>普通商品</span></p>
 				{
 				this.state.list.map((item,index)=>
-				<div className="cart-list" key={index}>
-					<p className="cart-pu"><span>普通商品</span></p>
-					<div className="cart-dan">
+				
+					<div className="cart-dan" key={index}>
 						<div className="cart-dian l">
 							<span onClick={()=>{
 
@@ -54,8 +56,10 @@ class Clear extends React.Component{
 						</div>
 	
 					</div>
-				</div>)
+					)
 				}
+			</div>
+				
 				{
 					this.state.list.length==0?
 				<div className="clear-cart">

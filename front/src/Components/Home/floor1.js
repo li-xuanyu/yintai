@@ -32,7 +32,7 @@ class Floor1 extends React.Component{
 				<div className="content">
 						{
 							this.state.homelist4.map(item=>
-								<div className="pro-one l" key={item.itemid}>
+								<a className="pro-one" key={item.itemid}>
 									<div className="pro-img">
 										<NavLink to={item.jumpurl}>
 											<img src={item.imgurl}/>
@@ -56,7 +56,7 @@ class Floor1 extends React.Component{
 										}
 										</div>
 									}
-								</div>
+								</a>
 							)
 						}
 				</div>

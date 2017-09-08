@@ -18,7 +18,8 @@ class Limitbuy extends React.Component{
 		super(prop);
 		this.state={
 			limitId:5,
-			isShow:false
+			isShow:false,
+			isHide:true
 			
 		}
 	}
@@ -26,6 +27,14 @@ class Limitbuy extends React.Component{
 	render(){
 		return(
 			<div id="category">
+			{
+				this.state.isHide?
+				<div className="bj-logo">
+				<img className="logo" src="https://r.ytrss.com/mobile/img/h5-loading.gif"/>
+				</div>
+				:
+				null
+			}
 			<div className="yintai-header">
 			<NavLink to="/home" className="back-button" onClick={()=>{
 				this.props.history.goBack();
@@ -37,10 +46,10 @@ class Limitbuy extends React.Component{
 			</div>
 			<Alert isShow={this.state.isShow} event={this.handleClicks.bind(this)}></Alert>
 			<div id="limitbuy">
-				<Nav event={this.handleClick.bind(this)}></Nav>
+				<Nav event={this.handleClick.bind(this)} logo={this.handleLogo2.bind(this)}></Nav>
 				
 				<section>
-				<Liebiao isId={this.state.limitId} event={this}></Liebiao>
+				<Liebiao isId={this.state.limitId} event={this} logo={this.handleLogo.bind(this)}></Liebiao>
 				</section>
 			</div>	
 			</div>
@@ -55,6 +64,16 @@ class Limitbuy extends React.Component{
 	handleClicks(){
 		this.setState({
 			isShow:!this.state.isShow
+		})
+	}
+	handleLogo(){
+		this.setState({
+			isHide:false
+		})
+	}
+	handleLogo2(){
+		this.setState({
+			isHide:true
 		})
 	}
 }

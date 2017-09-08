@@ -25,11 +25,13 @@ class Nav extends React.Component{
 	render(){
 		return(
 			<nav>
-				<ul>
+				<ul onClick={()=>{
+					this.props.logo();
+				}}>
 					{
 						this.state.limit.map(item=>
 							<li key={item.bargaintagtype} onClick={()=>{
-								this.props.event(item.bargaintagtype)
+								this.props.event(item.bargaintagtype);
 							}}>{item.bargaintagname}</li>
 						)
 					}

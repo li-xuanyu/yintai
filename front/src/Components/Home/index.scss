@@ -151,11 +151,15 @@ $base:30px; //html fontsize 就设置成这个值
             }
         }
         .content{
-            width:100%;
             padding:px2rem(5px) px2rem(3px);
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: auto;
+
             .pro-one{
-                width:20%;
-                position:relative;
+                display: inline-block;
+                height: px2rem(185px);
+                width:px2rem(85px);
                 padding:0 px2rem(2px) 0 0;
                 background:#fff;
                 .pro-img{
@@ -171,6 +175,10 @@ $base:30px; //html fontsize 就设置成这个值
                     color: #666;
                     font-size:px2rem(14px);
                     overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
                 }
                 .pro-price{
                     height: px2rem(18px);
@@ -190,7 +198,10 @@ $base:30px; //html fontsize 就设置成这个值
                     background-color: #ff3b7f;
                     color: #fff;
                 }
-            }
+
+            } 
+        
+            
         }
     }
     .floor2{

@@ -116,6 +116,7 @@ $base:30px; //html fontsize 就设置成这个值
             .cart-pu{
                 width: 100%;
                 height: px2rem(30px);
+                margin: px2rem(10px) px2rem(10px);
                 span{
                     float: left;
                     line-height: px2rem(30px);
@@ -123,6 +124,8 @@ $base:30px; //html fontsize 就设置成这个值
                     padding: 0 px2rem(5px);
                     text-align: center;
                     background-color:#ff3b7f;
+                    border-radius:px2rem(5px);
+                    color:#fff;
                 }
             }
 
@@ -247,7 +250,7 @@ $base:30px; //html fontsize 就设置成这个值
     			position:relative;
     			border: 0;
     			border-top: px2rem(1px) solid #999;
-    			width: px2rem(220px);
+    			width: px2rem(260px);
     			display: block;
     			height: px2rem(20px);
     			margin: 0 auto;
@@ -260,8 +263,8 @@ $base:30px; //html fontsize 就设置成这个值
     				z-index: 20;
     				text-align: center;
     				line-height: px2rem(20px);
-    				padding: 0 px2rem(5px);
-    				background:#fff;
+    				padding: 0 px2rem(8px);
+    				background:#eee;
 
     				img{
     					float: left;

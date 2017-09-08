@@ -96,8 +96,16 @@ $base:30px; //html fontsize 就设置成这个值
         display: block;
         width: px2rem(375px);
         height: px2rem(637px);
-        background-color:rgba(0,0,0,.1);
+        background-color:rgba(0,0,0,.2);
 
+        .logo{
+            position:absolute;
+            top:45%;
+            left:50%;
+            width: px2rem(100px);
+            height: px2rem(20px);
+            margin-left: px2rem(-50px);
+        }
         .kd-alert {
             display: block;
             position: absolute;

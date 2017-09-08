@@ -14,6 +14,7 @@ class Alert extends React.Component{
 			{
 				this.props.isShow?
 				<div id="bj-alert">
+				<img className="logo" src="https://r.ytrss.com/mobile/img/h5-loading.gif"/>
 				<div className="kd-alert">
 				<div className="alert-content" onClick={()=>{
 					this.props.event()
