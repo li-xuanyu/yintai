@@ -19,7 +19,7 @@ import Accont from "./Components/Accont";
 import Register from "./Components/Register";
 import Details from "./Components/Details";
 import Product from "./Components/Product";
-
+import Mymine from "./Components/Mymine"
 
 //用router包裹我们的根组件
 const router=(
@@ -28,7 +28,7 @@ const router=(
 				<Switch>
 					<Route path="/home" component={Home}/>
 					<Route path="/limitbuy" component={Limitbuy}/>
-
+					<Route path="/mymine" component={Mymine}/>
 					<Route path="/category" component={Category}/>
 					<Route path="/register" component={Register}/>
 					<Route path="/cart/:cartID" component={Cart}/>

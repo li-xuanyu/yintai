@@ -1,0 +1,95 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	outline:none;
+}
+body,html{
+	width:100%;
+	height:100%;
+	background:#f1f1f1;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.l{
+	float:left;
+}
+.r{
+	float:right;
+}
+$base:30px; //html fontsize 就设置成这个值
+@function px2rem($px){
+  @return $px/$base *1rem;
+}
+.viewport {
+    width: 100%;
+    padding-top: px2rem(40px);
+
+    .user-information {
+    	background-color: #ff7ba9;
+    	width: 100%;
+    	height: px2rem(120px);
+    	position: relative;
+
+    	.user-img {
+    		width: 100%;
+    		height: px2rem(70px);
+    		text-align: center;
+    		padding: px2rem(10px) 0 px2rem(8px);
+
+    		img {
+    			display: block;
+    			margin: 0 auto;
+    			width: px2rem(70px);
+    			height: px2rem(70px);
+    			border-radius: px2rem(70px);
+    			border: px2rem(1px) solid #fff;
+			}
+		}
+
+		.user-name {
+    		text-align: center;
+    		color: #fff;
+    		font-size: px2rem(16px);
+    		margin-top: px2rem(10px);
+		}
+
+		.user-level {
+    		position: absolute;
+    		right: px2rem(10px);
+    		top: px2rem(10px);
+    		color: #710028;
+    		font-size: px2rem(12px);
+		}
+	}
+	.boder-top-bottom, .user-common, .user-logout, .user-order {
+    	border-top: px2rem(1px) solid #d5d5d5;
+	}
+	.user-common, .user-logout, .user-money, .user-order, .user-other a {
+    	border-bottom: px2rem(1px) solid #d5d5d5;
+	}
+	.user-order {
+		width: 100%;
+		height: px2rem(79px);
+    	background-color: #fff!important;
+	}
+	.user-order a {
+    	width: 25%;
+    	margin: px2rem(15px) 0 px2rem(15px) px2rem(-1px);
+    	color: #333;
+    	font-size: px2rem(14px);
+    	
+	}
+	.user-money a, .user-order a, .user-other a {
+    	text-align: center;
+    	border-left: px2rem(1px) solid #d5d5d5;
+    	float: left;
+    	text-decoration: none;
+	}
+
+
+}

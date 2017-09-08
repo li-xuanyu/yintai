@@ -18,7 +18,15 @@ class Mine extends React.Component{
 	render(){
 		return(
 			<div id="category" className="mine">
-			<Hear event={this.handleClick.bind(this)}></Hear>
+			<div className="yintai-header">
+			<NavLink to="/home" className="back-button" onClick={()=>{
+				this.props.history.goBack();
+			}}>＜</NavLink>
+			<div className="hear-name">我的银泰</div>
+			<div className="xiala r" onClick={this.handleClick.bind(this)}>
+				<span>···</span>
+				</div>		
+			</div>
 			<Alert isShow={this.state.isShow} event={this.handleClick.bind(this)}></Alert>
 			<Main></Main>
 			{this.props.children}
