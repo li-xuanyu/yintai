@@ -23,7 +23,6 @@ class Clear extends React.Component{
 		return(
 
 			<div id="clear">
-			
 			<div id="allprod">
 				<div className="fir-sig-redu">
 				<img src="https://r.ytrss.com/mobile/img/broadcast.png" className="l"/>
@@ -32,26 +31,53 @@ class Clear extends React.Component{
 			</div>
 
 			<div className="cart-list" >
-					<p className="cart-pu"><span>普通商品</span></p>
+				<p className="cart-pu"><span>普通商品</span></p>
 				{
 				this.state.list.map((item,index)=>
-				
 					<div className="cart-dan" key={index}>
 						<div className="cart-dian l">
 							<span onClick={()=>{
-
 							}} className="color1 color2"></span>
 						</div>
-
 						<div className="cart-tu l" >
 							<img src={item.url}/>
-							<p>{item.name}</p>
-							<span> {item.name2} : {item.value} </span>
-							<span>￥{item.ytprice}.00</span>
+							<div className="name">{item.name}</div>
+							<span className="price"> {item.name2} : {item.value} </span>
+							<span className="price">
+								<strong>￥<b className="ytprice">{item.ytprice}</b>.00</strong></span>
 							<div className="button r">
-								<button className="l">-</button>
-								1
-								<button className="r">+</button>
+								<button className="l jian" onClick={()=>{
+									var value=document.querySelector('.num');
+									var price=document.querySelector(".black-pink");
+									var ytprice=document.querySelector('.ytprice');
+									var perprice=0;
+									perprice=ytprice.innerHTML;
+									console.log(perprice);
+									var num=0;
+									num=value.innerHTML;
+									if(num<=1){
+										num=1;
+									}else{
+										num--;
+									}
+									value.innerHTML=num;
+									price.innerHTML=perprice*num;
+									}
+								}>-</button>
+								<span className="num">1</span>
+								<button className="r jia" onClick={()=>{
+									var value=document.querySelector(".num");
+									var price=document.querySelector(".black-pink");
+									var ytprice=document.querySelector('.ytprice');
+									var perprice=0;
+									perprice=ytprice.innerHTML;
+									var num=0;
+									num=value.innerHTML;
+									num++;
+									value.innerHTML=num;
+									price.innerHTML=perprice*num;
+									
+								}}>+</button>
 							</div>
 						</div>
 	
@@ -61,7 +87,7 @@ class Clear extends React.Component{
 			</div>
 				
 				{
-					this.state.list.length==0?
+				this.state.list.length==0?
 				<div className="clear-cart">
 				<div className="clear-tip">
 				<img src="https://r.ytrss.com/mobile/img/clearcart2.png"/>
@@ -69,17 +95,12 @@ class Clear extends React.Component{
 				<p>快去随便逛逛吧</p>
 				</div>
 				<div className="clear-button">
-				<NavLink to="/home" >随便逛逛</NavLink>
+				<NavLink to="/home">随便逛逛</NavLink>
 				</div>
 				</div>
 				:
 				null
 				}
-				
-			
-
-			
-
 			<div className="rec-title">
 				<legend>
 					<div>
@@ -88,7 +109,27 @@ class Clear extends React.Component{
 					</div>
 				</legend>
 			</div>
-			
+			<div className="cart-view">
+				<div id="select-all">
+					<div className="checkbox" selected>
+						<span></span>
+					</div>
+					<div className="text">全选</div>
+				</div>
+				<div className="cart-summary">
+					<div id="cart-summary">
+						<div className="total-box">
+						合计：<strong className="black-pink">￥</strong>
+						</div>
+						<div className="total-tip">
+						已满199元，免运费
+						</div>
+					</div>
+				</div>
+				<div id="goto-settle">
+					去结算
+				</div>
+			</div>
 			</div>
 		)
 	}

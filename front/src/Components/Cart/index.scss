@@ -163,22 +163,21 @@ $base:30px; //html fontsize 就设置成这个值
                         margin-top: px2rem(15px);
                         border: px2rem(1px) solid #aaa;
                     }
-                    p{
-                        width: 70%;
-                        float: left;
-                        font-size: px2rem(20px);
-                        margin-top: px2rem(15px);
-                        margin-left: px2rem(10px);
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                    .name{
+                        color:#333;
+                        font-size:px2rem(14px);
+                        height:px2rem(42px);
+                        text-align:left;
+                        text-indent:1em;
+                        line-height:px2rem(42px);
+                        overflow:hidden;
                     }
-                    span{
+                    .price{
                         width: 40%;
                         margin-top: px2rem(3px);
                         margin-left: px2rem(10px);
                         float: left;
-                        font-size: px2rem(16px);
+                        font-size: px2rem(14px);
                     }
 
                     div{
@@ -190,6 +189,11 @@ $base:30px; //html fontsize 就设置成这个值
                             width: px2rem(18px);
                             line-height: px2rem(18px);
                             margin: 0 px2rem(10px);
+                            .num{
+                                float:left;
+                                width:10%;
+
+                            }
                         }
                     }
                 }
@@ -316,6 +320,83 @@ $base:30px; //html fontsize 就设置成这个值
     			
 			}
 		}
+
+        .cart-view{
+            position: fixed;
+            width:100%;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+            width: 100%;
+            padding: px2rem(8px) px2rem(90px) px2rem(8px) px2rem(45px);
+            border-top: px2rem(1px) solid #d2d2d2;
+            background-color: #fff;
+            height: px2rem(55px);
+            #select-all{
+                position: absolute;
+                left: 0;
+                top: px2rem(8px);
+                height: px2rem(45px);
+                width: px2rem(45px);
+                text-align: center;
+                .checkbox{
+                    margin-left: px2rem(13px);
+                    span{
+                        box-sizing: border-box;
+                        display: block;
+                        padding: px2rem(3px);
+                        width: px2rem(18px);
+                        height: px2rem(18px);
+                        border: px2rem(1px) solid #d2d2d2;
+                        border-radius: 100%;
+                        background-clip: content-box;
+                        background-color: #ff3b7f;
+                    }
+                }
+                .text{
+                    font-size:px2rem(14px);
+                }
+            }
+            .cart-summary{
+                min-height: px2rem(38px);
+                padding-left: px2rem(13px);
+                border-left: px2rem(1px) solid #d2d2d2;
+                #cart-summary{
+                    .total-box{
+                        font-size:px2rem(14px);
+                        .black-pink{
+                            color: #e5004f;
+                        }
+                    }
+                    .total-tip{
+                            width: 100%;
+                            font-size:px2rem(14px);
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            line-height: px2rem(25px);
+                    }
+                }
+            }
+            #goto-settle{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: px2rem(90px);
+                color: #fff;
+                font-size: px2rem(18px);
+                line-height: px2rem(54px);
+                text-align: center;
+                background-color: #e5004f;
+                align-items: center;
+                justify-content: center;
+                display: -webkit-box;
+                -webkit-box-orient: horizontal;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;
+            }
+        }
 	
 	}
 
