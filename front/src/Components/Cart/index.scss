@@ -27,6 +27,8 @@ $base:30px; //html fontsize 就设置成这个值
 }
 #cart{
 	width:100%;
+    background:#eee;
+    height: 100%;
 	.cart-header {
     	width: 100%;
         position: relative;
@@ -71,7 +73,7 @@ $base:30px; //html fontsize 就设置成这个值
 		position:relative;
         z-index: 14;
         width: 100%;
-        height: px2rem(627px);
+        height: 100%;
         background:#eee;
 
 		#allprod{
@@ -259,7 +261,7 @@ $base:30px; //html fontsize 就设置成这个值
     				text-align: center;
     				line-height: px2rem(20px);
     				padding: 0 px2rem(5px);
-    				background:#eee;
+    				background:#fff;
 
     				img{
     					float: left;
