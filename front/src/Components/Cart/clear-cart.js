@@ -4,50 +4,20 @@ class Clear extends React.Component{
 	constructor(prop){
 		super(prop);
 		this.state=({
-			isHide:false,
-			name:'',
-			ytprice:'',
-			name2:'',
-			url:'',
-			value:'',
 			list:[]
-
 		})
 		
 	}
 
 	componentDidMount() {
-		
-		let url=this.props.cartID;
-		console.log(url.props.match.params.cartID)
-		if(url.props.match.params.cartID==="购物车"){
-			this.setState({
-				isHide:false
-			})
+			axios.get("/api/cart").then(res=>{
 
-		}else{
-			axios.get(`/api/address?itemcode=${url.props.match.params.cartID}`).then(res=>{
-	    		
 	    		this.setState({
-	    			name:res.data.data.products[0].name,
-	    			ytprice:res.data.data.products[0].ytprice,
-	    			name2:res.data.data.products[0].skuproperty[0].name,
-	    			url:res.data.data.products[0].middleimgurls[0],
-	    			value:res.data.data.products[0].skuproperty[0].value,
-	    			list:res.data.data.products[0]
+	    			list:res.data
 	    		})
-	    		
+	    		console.log(this.state.list)
 	    	})
-	    	
-	    	this.setState({
-				isHide:true
-			})
-
-			setTimeout(()=>{console.log(this.state.list)},1000)
 		}
-	    
-
-	}
 
 	render(){
 		return(
@@ -60,9 +30,9 @@ class Clear extends React.Component{
 				<span>移动端首单立减<span>5</span>元，速来占便宜啦</span>
 				</div>
 			</div>
-			{
-				this.state.isHide==true?
-				<div className="cart-list">
+				{
+				this.state.list.map((item,index)=>
+				<div className="cart-list" key={index}>
 					<p className="cart-pu"><span>普通商品</span></p>
 					<div className="cart-dan">
 						<div className="cart-dian l">
@@ -72,10 +42,10 @@ class Clear extends React.Component{
 						</div>
 
 						<div className="cart-tu l" >
-							<img src={this.state.url}/>
-							<p>{this.state.name}</p>
-							<span> {this.state.name2} : {this.state.value} </span>
-							<span>￥{this.state.ytprice}.00</span>
+							<img src={item.url}/>
+							<p>{item.name}</p>
+							<span> {item.name2} : {item.value} </span>
+							<span>￥{item.ytprice}.00</span>
 							<div className="button r">
 								<button className="l">-</button>
 								1
@@ -84,8 +54,10 @@ class Clear extends React.Component{
 						</div>
 	
 					</div>
-				</div>
-				:
+				</div>)
+				}
+				{
+					this.state.list.length==0?
 				<div className="clear-cart">
 				<div className="clear-tip">
 				<img src="https://r.ytrss.com/mobile/img/clearcart2.png"/>
@@ -96,8 +68,11 @@ class Clear extends React.Component{
 				<NavLink to="/home" >随便逛逛</NavLink>
 				</div>
 				</div>
-			}
+				:
+				null
+				}
 				
+			
 
 			
 

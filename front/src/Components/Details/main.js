@@ -9,7 +9,9 @@ class Main extends React.Component{
 			details:[],
 			special:[],
 			promotion:[],
-			brand:[]
+			brand:[],
+			sku:[],
+			logo:[]
 		}
 	}
 
@@ -23,9 +25,11 @@ class Main extends React.Component{
 				imgs:res.data.data.products[0].superlargeimgurls,
 				details:res.data.data.products.slice(-1)[0],
 				special:res.data.data.products.slice(-1)[0].promotions[0],
-				promotion:res.data.data.products.slice(-1)[0].promotions[0].desc[0]
+				promotion:res.data.data.products.slice(-1)[0].promotions[0].desc[0],
+				sku:res.data.data.products.slice(-1)[0].skuproperty[0],
+				logo:res.data.data.products[0].largeimgurls[0]
 	    	})
-	    	console.log(res.data.data);
+	    	console.log(this.state.details.name);
 	    })
 
 	    window.onscroll=()=>{
@@ -42,6 +46,17 @@ class Main extends React.Component{
 	render(){
 		return (
 			<div id="detail">
+				<div id="product-module" className="l">
+					<div className="cart l">
+						<a href="/cart/购物车">
+							<i></i>购物车
+						</a>
+					</div>
+					<div className="other l">
+						<span className="other-buy l" onClick={this.handleClick.bind(this)}>加入购物车</span>
+						<span className="other-now l">立即购买</span>
+					</div>
+				</div>
 				<div className="slider l">
 					<div className="swipe">
 					<ReactSwipe className="carousel" swipeOptions={{continuous:true,auto:3000,speed:1000}}
@@ -199,6 +214,23 @@ class Main extends React.Component{
 			</footer>
 			</div>
 		)
+	}
+
+	handleClick(){
+		axios.post("/api/cart",{
+			name:this.state.details.name,
+			ytprice:this.state.details.ytprice,
+			name2:this.state.sku.name,
+			value:this.state.sku.value,
+			url:this.state.logo
+		}).then(res=>{
+				if(res.data){
+					alert("加入购物车成功");
+				}
+				else{
+					alert("加入购物车失败");
+				}
+    		})
 	}
 }
 

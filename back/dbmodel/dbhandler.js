@@ -10,10 +10,20 @@ var user={
 	password:{type:String}
 }
 
+var good={
+	name:{type:String},
+	ytprice:{type:String},
+	name2:{type:String},
+	url:{type:String},
+	value:{type:String}
+}
+
 //讲collection与model关联,自动创建collection的名字是users
 
 mongoose.model("user",new Schema(user));
+mongoose.model("good",new Schema(good));
 
 module.exports={
-	user:mongoose.model("user")
+	user:mongoose.model("user"),
+	good:mongoose.model("good")
 }

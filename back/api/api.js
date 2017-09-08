@@ -2,6 +2,34 @@ var express=require('express');
 var router=express.Router();
 var spider=require("./spider");
 
+//购物车
+
+router.post('/cart',function(req,res,next){
+	dbhandler.good.create({
+		name:req.body.name,
+		ytprice:req.body.ytprice,
+		name2:req.body.name2,
+		url:req.body.url,
+		value:req.body.value
+	},function(error,result){
+		if(!error){
+			res.send(true);
+		}else{
+			console.log(error);
+		}
+	})
+})
+
+router.get('/cart',function(req,res,next){
+	dbhandler.good.find({},function(error,data){
+		if(data){
+			res.send(data);
+		}else{
+			res.send(false);
+		}
+	})
+})
+
 //注册
 router.post('/register',function(req,res,next){
 	//req.body接受前端的post请求；
